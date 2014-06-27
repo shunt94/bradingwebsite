@@ -14,7 +14,10 @@ DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['morning-ridge-8199.herokuapp.com/',
+                 'bradingsoftware.co.uk',
+                 'localhost',
+                 '127.0.0.1']
 
 
 # Application definition
