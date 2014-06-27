@@ -1,6 +1,3 @@
-
-
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -13,7 +10,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '=-pr@o)u)q)ov@b5yl2s@#(m3(1n!i0g8!m#)=0jb*!4kjbh#w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -29,6 +26,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'hellodjango.apps.brading',
+    'south'
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,10 +49,7 @@ WSGI_APPLICATION = 'hellodjango.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': os.path.join(BASE_DIR, ''),
-    }
+
 }
 
 # Internationalization
@@ -78,3 +75,9 @@ import dj_database_url
 DATABASES['default'] = dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
