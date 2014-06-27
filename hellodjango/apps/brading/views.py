@@ -22,6 +22,13 @@ def jordan(request):
     )
 
 
+def emma(request):
+    return render_to_response(
+        'emma.html',
+        {},
+        content_type=RequestContext(request)
+    )
+
 def connor(request):
     return render_to_response(
         'connor.html',
