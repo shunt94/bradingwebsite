@@ -14,8 +14,9 @@ DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['morning-ridge-8199.herokuapp.com/',
+ALLOWED_HOSTS = ['morning-ridge-8199.herokuapp.com',
                  'bradingsoftware.co.uk',
+                 'www.bradingsoftware.co.uk',
                  'localhost',
                  '127.0.0.1']
 
