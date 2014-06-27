@@ -2,6 +2,9 @@
 {% block header_title %}
     Connors Private Page
 {% endblock %}
+{% block css %}
+    {{ block.super }}
+{% endblock %}
 {% block content %}
     {% for bookmark in bookmarks %}
         <a href="http://{{ bookmark.url }}/">{{ bookmark.name }}</a>

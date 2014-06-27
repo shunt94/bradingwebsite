@@ -3,6 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>{% block header_title %}{% endblock %}</title>
+    {% block css %}
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}"
+    {% endblock %}
 </head>
 <body>
     {% block content %}
