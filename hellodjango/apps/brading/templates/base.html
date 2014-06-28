@@ -2,14 +2,24 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block header_title %}{% endblock %}</title>
     {% block css %}
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/base.css' %}"
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     {% endblock %}
 </head>
 <body>
     {% block content %}
     {% endblock %}
 </body>
+{% block js %}
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}></script>
+{#    <script src="js/docs.min.js"></script>#}
+{% endblock %}
 </html>
