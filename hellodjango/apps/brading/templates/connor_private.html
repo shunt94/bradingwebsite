@@ -3,10 +3,22 @@
     Connors Private Page
 {% endblock %}
 {% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/connor_private.css' %}">
     {{ block.super }}
 {% endblock %}
 {% block content %}
-    {% for bookmark in bookmarks %}
-        <a href="http://{{ bookmark.url }}/">{{ bookmark.name }}</a>
-    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container" id="base_container">
+    <div class="row">
+        <div class="col-12">
+        {% for bookmark in bookmarks %}
+            <a href="http://{{ bookmark.url }}/" class="btn btn-info btn-large">{{ bookmark.name }}</a>
+        {% endfor %}
+        </div>
+    </div>
+    </div>
 {% endblock %}
