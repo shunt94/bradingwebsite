@@ -5,6 +5,7 @@
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:$PROJECT_DIR$/brading_db</jdbc-url>
+      <user-name>connor</user-name>
       <libraries />
     </data-source>
   </component>
