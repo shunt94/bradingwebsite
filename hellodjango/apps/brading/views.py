@@ -29,9 +29,50 @@ def emma(request):
         content_type=RequestContext(request)
     )
 
+
 def connor(request):
     return render_to_response(
-        'connor.html',
+        'connor/connor.html',
+        {},
+        content_type=RequestContext(request)
+    )
+
+
+def connor_contact(request):
+    return render_to_response(
+        'connor/contact.html',
+        {},
+        content_type=RequestContext(request)
+    )
+
+
+def connor_education(request):
+    return render_to_response(
+        'connor/education.html',
+        {},
+        content_type=RequestContext(request)
+    )
+
+
+def connor_hobbies(request):
+    return render_to_response(
+        'connor/hobbies.html',
+        {},
+        content_type=RequestContext(request)
+    )
+
+
+def connor_projects(request):
+    return render_to_response(
+        'connor/projects.html',
+        {},
+        content_type=RequestContext(request)
+    )
+
+
+def connor_work_experience(request):
+    return render_to_response(
+        'connor/work_experience.html',
         {},
         content_type=RequestContext(request)
     )
@@ -50,7 +91,7 @@ def connor_private(request):
         'bookmarks': bookmarks,
     }
     return render_to_response(
-        'connor_private.html',
+        'connor/private.html',
         content,
         content_type=RequestContext(request)
     )

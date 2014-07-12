@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'connor/base.html' %}
 {% block header_title %}
     Connors Private Page
 {% endblock %}
@@ -8,17 +8,11 @@
     {{ block.super }}
 {% endblock %}
 {% block content %}
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container" id="base_container">
-    <div class="row">
-        <div class="col-12">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
         {% for bookmark in bookmarks %}
             <a href="http://{{ bookmark.url }}/" class="btn btn-info btn-large">{{ bookmark.name }}</a>
         {% endfor %}
         </div>
-    </div>
     </div>
 {% endblock %}

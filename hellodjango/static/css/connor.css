@@ -1,3 +1,6 @@
+body, html{
+    height: 100%;
+}
 li a{
     width: auto;
 }
@@ -5,15 +8,16 @@ li a{
     padding: 0;
     margin: 0;
     width: auto;
+    height: 100%;
 }
 .row{
     padding: 0;
     margin: 0;
+     height: 100%;
 }
 .side_bar{
-    background-color: #404040 ;
+    background-color: #404040;
     height: 100%;
-
 }
 .connor_pic{
     height: 140px;
@@ -22,14 +26,61 @@ li a{
     margin-left: auto;
     margin-right: auto;
 }
-.body{
-    height: 100%;
-}
 .name{
     font-size: 24px;
-    color: #E0E0E0 ;
+    color: #E0E0E0;
 }
 .job_title{
     font-size: 20px;
-    color: #E0E0E0 ;
+    color: #E0E0E0;
 }
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    color: #E0E0E0;
+    background-color: #787878 	;
+}
+a{
+    color: #E0E0E0;
+}
+.main_image{
+    height: 400px;
+}
+.description_text{
+    padding: 50px;
+    margin-left: -150px;
+    margin-top: 150px;
+}
+.row{
+   padding-bottom: 50px;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+.carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
