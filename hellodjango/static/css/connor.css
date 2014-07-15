@@ -19,7 +19,14 @@ li a{
     background-color: #404040;
     position: fixed;
     z-index: 10000;
+    width: 300px;
+    margin-bottom: -5000px;
+    padding-bottom: 5000px;
+    overflow: hidden;
 
+}
+#main_content{
+    margin-left: 300px;
 }
 .connor_pic{
     height: 140px;
