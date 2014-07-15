@@ -17,7 +17,9 @@ li a{
 }
 .side_bar{
     background-color: #404040;
-    height: 100%;
+    position: fixed;
+    z-index: 10000;
+
 }
 .connor_pic{
     height: 140px;
@@ -65,12 +67,13 @@ a{
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
+  color: #404040;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
-  background-color: #777;
+  background-color: white;
 }
 .carousel-inner > .item > img {
   position: absolute;
@@ -84,3 +87,22 @@ a{
     font-size: 21px;
     line-height: 1.4;
   }
+.carousel-control{
+    background-color: white;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+
+.glyphicon-chevron-left, .glyphicon-chevron-right{
+    color: #404040;
+}
+.skills_image{
+    margin-left: 100px;
+    /*height: 500px;*/
+    /*width: 600px;*/
+}
+.contact{
+    color: white;
+    text-align: center;
+}

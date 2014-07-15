@@ -25,6 +25,10 @@ urlpatterns = patterns('',
         name="connor_work_experience"),
     url(r'^invalid_group/$', 'hellodjango.apps.brading.views.invalid_group',
         name="invalid_group"),
+    url(r'^keep/$', 'hellodjango.apps.brading.views.keep',
+        name="keep"),
+    url(r'connor/pdf/$', 'hellodjango.apps.brading.views.connor_pdf',
+        name="connor_pdf"),
     url(r'^accounts/', include('registration.backends.default.urls')),
 
 )

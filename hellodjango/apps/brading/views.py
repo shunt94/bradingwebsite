@@ -3,7 +3,9 @@ from django.contrib.auth.models import Group
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from hellodjango.apps.brading.models import Bookmark
+from hellodjango.apps.brading.models import Bookmark, List
+from reportlab.pdfgen import canvas
+from django.http import HttpResponse
 
 
 def home(request):
@@ -36,6 +38,23 @@ def connor(request):
         {},
         content_type=RequestContext(request)
     )
+
+
+def connor_pdf(request):
+    response = HttpResponse(content_type='application/pdf')
+    response['Conte5nt-Disposition'] = 'attachment; filename="connor_swain_cv.pdf"'
+
+    # Create the PDF object, using the response object as its "file."
+    p = canvas.Canvas(response)
+
+    # Draw things on the PDF. Here's where the PDF generation happens.
+    # See the ReportLab documentation for the full list of functionality.
+    p.drawString(10, 10, "Hello, this is Connor")
+
+    # Close the PDF object cleanly, and we're done.
+    p.showPage()
+    p.save()
+    return response
 
 
 def connor_contact(request):
@@ -74,6 +93,19 @@ def connor_work_experience(request):
     return render_to_response(
         'connor/work_experience.html',
         {},
+        content_type=RequestContext(request)
+    )
+
+
+@login_required
+def keep(request):
+    lists = List.objects.filter(users=request.user)
+    content = {
+        'lists': lists,
+    }
+    return render_to_response(
+        "keep.html",
+        content,
         content_type=RequestContext(request)
     )
 
