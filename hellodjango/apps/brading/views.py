@@ -12,7 +12,7 @@ def home(request):
     return render_to_response(
         'index.html',
         {},
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -20,7 +20,7 @@ def jordan(request):
     return render_to_response(
         'jordan.html',
         {},
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -28,7 +28,7 @@ def emma(request):
     return render_to_response(
         'emma.html',
         {},
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -36,7 +36,7 @@ def connor(request):
     return render_to_response(
         'connor/connor.html',
         {},
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -61,7 +61,7 @@ def connor_contact(request):
     return render_to_response(
         'connor/contact.html',
         {},
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -69,7 +69,7 @@ def connor_education(request):
     return render_to_response(
         'connor/education.html',
         {},
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -77,7 +77,7 @@ def connor_hobbies(request):
     return render_to_response(
         'connor/hobbies.html',
         {},
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -85,7 +85,7 @@ def connor_projects(request):
     return render_to_response(
         'connor/projects.html',
         {},
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -106,7 +106,7 @@ def keep(request):
     return render_to_response(
         "keep.html",
         content,
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -125,7 +125,7 @@ def connor_private(request):
     return render_to_response(
         'connor/private.html',
         content,
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -133,5 +133,5 @@ def invalid_group(request):
     return render_to_response(
         'invalid_group.html',
         {},
-        content_type=RequestContext(request)
+        context_instance=RequestContext(request)
     )

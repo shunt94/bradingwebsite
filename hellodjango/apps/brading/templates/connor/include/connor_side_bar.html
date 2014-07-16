@@ -3,21 +3,21 @@
     <br>
     <p class="text-center name">Connor Swain</p>
     <p class="text-center job_title">Software Engineer</p>
+    <br>
+    <br>
     <ul class="nav nav-pills nav-stacked">
         {% url 'connor' as connor %}
-        {% url 'connor_work_experience' as work_experience %}
-        {{ request.get_full_path }}
-    {{ request.path }}
-    {{ connor }}
+        {% url 'connor_hobbies' as hobbies %}
+        {% url 'connor_projects' as projects %}
         <li{% if request.get_full_path == connor %} class="active"{% endif %}>
             <a href="{{ connor }}"><span class="glyphicon glyphicon-home"></span> Profile</a>
         </li>
-        <li>
-            <a href="{% url 'connor_projects' %}"><span class="fa fa-trophy"></span> Projects</a>
+        <li{% if request.get_full_path == projects %} class="active"{% endif %}>
+            <a href="{{ projects }}"><span class="fa fa-trophy"></span> Projects</a>
         </li>
 
-        <li>
-            <a href="{% url 'connor_hobbies' %}"><span class="fa fa-life-bouy"></span> Hobbies</a>
+        <li{% if request.get_full_path == hobbies %} class="active"{% endif %}>
+            <a href="{{ hobbies }}"><span class="fa fa-life-bouy"></span> Hobbies</a>
         </li>
         <li>
             <a href="{% url 'connor_pdf' %}"><span class="glyphicon glyphicon-download-alt"></span> Full CV</a>
