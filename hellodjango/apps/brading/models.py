@@ -36,3 +36,6 @@ class Project(models.Model):
     skills = models.TextField(blank=False)
     start_date = models.DateField(blank=False)
     end_date = models.DateField(blank=True, null=True)
+
+    def __unicode__(self):
+        return self.title
