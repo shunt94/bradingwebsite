@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from hellodjango.apps.brading.models import Bookmark, List
+from hellodjango.apps.brading.models import Bookmark, List, Project
 from reportlab.pdfgen import canvas
 from django.http import HttpResponse
 
@@ -84,7 +84,7 @@ def connor_hobbies(request):
 def connor_projects(request):
     return render_to_response(
         'connor/projects.html',
-        {},
+        {"projects": Project.objects.all().order_by('-start_date')},
         context_instance=RequestContext(request)
     )
 

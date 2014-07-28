@@ -18,3 +18,21 @@ class List(models.Model):
 class ListItem(models.Model):
     text = models.CharField(max_length=255)
     list = models.ForeignKey(List, related_name="items")
+
+
+class Project(models.Model):
+    WORK = "glyphicon-briefcase"
+    UNI = "glyphicon-book"
+    HOME = "glyphicon-home"
+    icon_choices = (
+        (WORK, WORK),
+        (UNI, UNI),
+        (HOME, HOME),
+    )
+    title = models.CharField(max_length=255, blank=False)
+    description = models.TextField(blank=False)
+    icon = models.CharField(max_length=55, choices=icon_choices, blank=False)
+    completed = models.BooleanField(default=False, blank=False)
+    skills = models.TextField(blank=False)
+    start_date = models.DateField(blank=False)
+    end_date = models.DateField(blank=True, null=True)
