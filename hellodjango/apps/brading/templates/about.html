@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<head>
+    <title>Brading Software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container-fluid">
+            <ul class="nav nav-pills" class="pull-left">
+                <li><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li><a href="{% url 'portfolio' %}"><i class="fa fa-joomla"></i> Brading Software Portfolio</a>
+                </li>
+                <li class="active"><a href="{% url 'about' %}"><i class="fa fa-question-circle"></i> About Us and Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="space3"></div>
+
+    <div class="contact_us" style="text-align: center" style="font-size: 60px">
+        <div class="container">
+            <p id="contact_address">Contact us at Brading Software about a project, or any other enquiries, at info@bradingsoftware.co.uk</p>
+        </div>
+    </div>
+
+    <div id="space3"></div>
+
+    <div class="us">
+        <div class="container">
+            <h1 id="about_us">Who we are...</h1>
+            <div id="space3"></div>
+            <div class="row">
+                <div id="jordan" , class="col-md-4 col-xs-12" , style="height: 575px;">
+                    <img id="jdimg" src="http://imgur.com/7qKjOgx.jpg" class="img-circle" style="width: 360px; height: 360px;" />
+                    <h3>Jordan Ellis</h3>
+                    <p>Computer Science student at the University of Sussex.</p>
+                    <div style="text-align:center"><a href="https://twitter.com/jordaniellis" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @jordaniellis</a>
+                        <script>
+                            ! function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + '://platform.twitter.com/widgets.js';
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, 'script', 'twitter-wjs');
+                        </script>
+                        <div style="text-align:center">
+                            <a href="http://uk.linkedin.com/pub/jordan-ellis/58/130/296" style="text-decoration:none;"><span style="font: 80% Arial,sans-serif; color:#0783B6;"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Jordan Ellis's LinkedIn profile" style="vertical-align:middle" border="0">View Jordan Ellis's profile</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="connor" , class="col-md-4 col-xs-12" , style="height: 575px;">
+                    <img src="http://i.imgur.com/erjFcTH.jpg" class="img-circle" style="width: 360px; height: 360px;" />
+                    <h3>Connor Swain</h3>
+                    <p>Computer Science student at Sussex University, currently working at Singing horse studio.</p>
+                    <div style="text-align:center">
+                        <a href="https://twitter.com/entangly" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @entangly</a>
+                        <script>
+                            ! function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + '://platform.twitter.com/widgets.js';
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, 'script', 'twitter-wjs');
+                        </script>
+                    </div>
+                </div>
+                <div id="simon" , class="col-md-4 col-xs-12" , style="height: 575px;">
+                    <img src="http://i.imgur.com/rKqzTyt.jpg" class="img-circle" style="width: 360px; height: 360px;" />
+                    <h3>Simon Hunt</h3>
+                    <p>Computer Science student at Sussex University, currently working at Singing horse studio.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="space3"></div>
+
+
+    <div class="about" class="col-md-4 col-xs-12" style="text-align: center" style="font-size: 60px">
+        <div class="container">
+            <p id="contact_address">Contact us at Brading Software about a project, or any other enquiries, at info@bradingsoftware.co.uk</p>
+        </div>
+    </div>
+
+
+    <div id="space1"></div>
+
+    <footer>
+        <p id="b2t" class="pull-right"><a href="#">Back to top</a>
+        </p>
+        <p id="cprght">&copy; 2014 Brading Software Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+        </p>
+    </footer>
+
+</body>
+
+
+</html>

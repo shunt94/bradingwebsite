@@ -1,0 +1,94 @@
+.navbar ul li {
+	display: inline;
+	margin-top: 25px;
+	padding-left: 20px;
+}
+
+#jordan h3 {
+	color: black;
+	text-align: center;
+}
+
+#jordan p {
+	text-align: center;
+}
+
+#jordan a {
+
+}
+
+#connor {
+
+}
+
+#connor h3 {
+	color: black;
+	text-align: center;
+}
+
+#connor p {
+	text-align: center;
+}
+
+#simon {
+}
+
+#simon h3 {
+	text-align: center;
+	color: black;
+}
+
+#simon p {
+	text-align: center;
+}
+
+footer {
+	padding-top: 25px;
+}
+
+footer #cprght {
+	padding-left: 25px;
+}
+
+footer #b2t {
+	padding-right: 25px;
+}
+
+.row {
+	height:400px;
+}
+
+.us .container h2 {
+	padding-bottom: 10px;
+}
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+#space1 {
+	height:50px;
+}
+
+.space2 {
+	height:250px;
+}
+
+#space3 {
+	height:50px;
+}
+
+#about_us {
+	font-size: 60px;
+}
+
+#contact_address {
+	font-size: 30px;
+}

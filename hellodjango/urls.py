@@ -4,10 +4,13 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
+
     url(r'^$', 'hellodjango.apps.brading.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+
     url(r'^jordan/$','hellodjango.apps.brading.views.jordan', name='jordan'),
+    url(r'^portfolio/$','hellodjango.apps.brading.views.portfolio', name='portfolio'),
+    url(r'^about/$','hellodjango.apps.brading.views.about', name='about'),
+
     url(r'^admin/', include(admin.site.urls)),
     url(r'^connor/$', 'hellodjango.apps.brading.views.connor', name='connor'),
     url(r'^emma/$', 'hellodjango.apps.brading.views.emma', name='emma'),

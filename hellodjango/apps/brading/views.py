@@ -16,6 +16,22 @@ def home(request):
     )
 
 
+def portfolio(request):
+    return render_to_response(
+        'portfolio.html',
+        {},
+        context_instance=RequestContext(request)
+    )
+
+
+def about(request):
+    return render_to_response(
+        'about.html',
+        {},
+        context_instance=RequestContext(request)
+    )
+
+
 def jordan(request):
     return render_to_response(
         'jordan.html',

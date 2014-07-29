@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% block css %}
+        {% load static %}
+     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {{ block.super }}
+
+{% endblock %}
+{% block header_title %}
+    Brading Software
+{% endblock %}
+{% block content %}
+
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Insert background image here for app">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Traffic Racing App</h1>
+              <p>A high paced, addictive android app featuring 3 lanes of traffic to dodge!</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">See more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t1.0-9/q71/s720x720/10173681_10203723530918508_4567217123412847910_n.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Jordan Ellis</h2>
+          <p>My feelings, sentiments and uninteresting musings are (generally) best expressed through endless retweets of an internet-famous dog, wow.</p>
+          <p><a class="btn btn-default" href="{% url 'jordan' %}" role="button">See more &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://scontent-b-cdg.xx.fbcdn.net/hphotos-prn1/t1.0-9/q71/s720x720/1045071_10151530494401313_1960305701_n.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Connor Swain</h2>
+          <p>Computer Science student at Sussex University, currently working at Singing horse studios.</p>
+          <p><a class="btn btn-default" href="{% url 'connor' %}" role="button">See more &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10407947_10204039534778943_2595468218798481293_n.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Simon Hunt</h2>
+          <p>Computer Science student at Sussex University, currently working at Singing horse studios.</p>
+          <p><a class="btn btn-default" href="#" role="button">See more &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Sussex university students <span class="text-muted">Working towards Computer Science Bsc</span></h2>
+          <p class="lead">Working towards our undergraduate degree, we're spending time on developing apps, websites and other general software related things!</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" style="margin-top: 110px;" src="http://www.essex.ac.uk/ldev/images/US_Logo_Standard_use_RGB_Flint.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="http://nuiteq.com/wp-content/uploads/2014/05/android_vector.jpg" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">High quality, addictive apps <span class="text-muted">Exclusively on android</span></h2>
+          <p class="lead">All our apps are written for android, to make use of our Java skills and open source knowledge</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, <span class="text-muted">The future.</span></h2>
+          <p class="lead">Aiming to develop multiple android apps across multiple genres as well web applications and services.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" style="margin-top: 110px;" src="http://us.cdn3.123rf.com/168nwm/kbuntu/kbuntu1108/kbuntu110800106/10227385-magnifying-glass-with-the-word-future-on-white-background.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Brading Software Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+{% endblock %}
+
