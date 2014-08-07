@@ -1,24 +1,25 @@
-{% extends 'connor/base.html' %}
-
-{% block content %}
+{% extends 'connor/one_page_base.html' %}
+{% block first_section %}
 <div class="row clearfix">
-    <div class="col-md-6 column">
-        <img src="http://arleenbradley.com/wp-content/uploads/2013/01/thumbs-up.jpg" class="main_image">
+    <div class="col-md-6">
+        <img src="http://s27.postimg.org/o18eyl44z/myskills.jpg" class="img-responsive main_image">
     </div>
-    <div class="col-md-6 column" style="">
+    <div class="col-md-6">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <p class="lead description_text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </div>
 </div>
-<div class="row clearfix">
-<div class="col-md-1"></div>
- <div class="col-md-11">
-        <br>
-        <br>
-        <br>
-        <img src="http://s27.postimg.org/o18eyl44z/myskills.jpg" class="img-responsive">
- </div>
-</div>
-<br>
+{% endblock %}
+{% block second_section %}
+    <br>
     <br>
 <div class="row clearfix">
     <div class="col-md-3"></div>
@@ -47,12 +48,11 @@
             <p>2012-2013</p>
           </div>
         </div>
-
-
-{#     <div id="skills" style="min-width: 400px; max-width: 600px; height: 400px; margin: 0 auto"></div>#}
     </div>
     <div class="col-md-3"></div>
 </div>
+{% endblock %}
+{% block third_section %}
 <div class="row clearfix">
     <div class="col-md-12">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -104,46 +104,4 @@
 {% endblock %}
 {% block js %}
 {{ block.super }}
-
-<script>
-    $(function () {
-
-	$('#skills').highcharts({
-
-	    chart: {
-	        polar: true,
-	        type: 'line'
-	    },
-
-	    title: {
-	        text: 'My relative computer skills',
-	        x: -80
-	    },
-
-	    pane: {
-	    	size: '90%'
-	    },
-
-	    xAxis: {
-	        categories: ['Java', 'Python', 'MySQL', 'CSS',
-	                'Android', 'HTML', 'Django', 'JavaScript'],
-	        tickmarkPlacement: 'on',
-	        lineWidth: 0
-	    },
-
-	    yAxis: {
-	        gridLineInterpolation: 'polygon',
-	        lineWidth: 0,
-	        min: 0
-	    },
-
-	    series: [{
-	        name: 'Skill Level',
-	        data: [8, 9, 6, 3, 6, 5, 9, 4],
-	        pointPlacement: 'off'
-	    },]
-
-	});
-});
-</script>
 {% endblock %}

@@ -1,32 +1,32 @@
 <br>
-    <img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpa1/t1.0-9/p720x720/1555285_10151894395021778_407212263_n.jpg" alt="Connor Swain" class="img-circle connor_pic">
-    <br>
-    <p class="text-center name">Connor Swain</p>
-    <p class="text-center job_title">Software Engineer</p>
-    <br>
-    <br>
-    <ul class="nav nav-pills nav-stacked">
-        {% url 'connor' as connor %}
-        {% url 'connor_hobbies' as hobbies %}
-        {% url 'connor_projects' as projects %}
-        <li{% if request.get_full_path == connor %} class="active"{% endif %}>
-            <a href="{{ connor }}"><span class="glyphicon glyphicon-home"></span> Profile</a>
-        </li>
-        <li{% if request.get_full_path == projects %} class="active"{% endif %}>
-            <a href="{{ projects }}"><span class="fa fa-trophy"></span> Projects</a>
-        </li>
+<img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpa1/t1.0-9/p720x720/1555285_10151894395021778_407212263_n.jpg" alt="Connor Swain" class="img-circle connor_pic">
+<br>
+<p class="text-center name">Connor Swain</p>
+<p class="text-center job_title">Software Engineer</p>
+<br>
+<br>
+<ul class="nav nav-pills nav-stacked">
+    {% url 'connor' as connor %}
+    {% url 'connor_hobbies' as hobbies %}
+    {% url 'connor_projects' as projects %}
+    <li{% if request.get_full_path == connor %} class="active"{% endif %}>
+        <a href="{{ connor }}"><span class="glyphicon glyphicon-home"></span> Profile</a>
+    </li>
+    <li{% if request.get_full_path == projects %} class="active"{% endif %}>
+        <a href="{{ projects }}"><span class="fa fa-trophy"></span> Projects</a>
+    </li>
 
-        <li{% if request.get_full_path == hobbies %} class="active"{% endif %}>
-            <a href="{{ hobbies }}"><span class="fa fa-life-bouy"></span> Hobbies</a>
-        </li>
-        <li>
-            <a href="{% url 'connor_pdf' %}"><span class="glyphicon glyphicon-download-alt"></span> Full CV</a>
-        </li>
-    </ul>
-        <br>
-        <br>
-        <br>
-    <h3 class="contact">Contact Details</h3>
-    <p class="contact">Email - connor@bradingsoftware.co.uk</p>
-    <p class="contact">Phone - 07921 589074</p>
-    <p class="contact">Location - Brighton</p>
+    <li{% if request.get_full_path == hobbies %} class="active"{% endif %}>
+        <a href="{{ hobbies }}"><span class="fa fa-life-bouy"></span> Hobbies</a>
+    </li>
+    <li>
+        <a href="{% url 'connor_pdf' %}"><span class="glyphicon glyphicon-download-alt"></span> Full CV</a>
+    </li>
+</ul>
+    <br>
+    <br>
+    <br>
+<h3 class="contact">Contact Details</h3>
+<p class="contact">Email - connor@bradingsoftware.co.uk</p>
+<p class="contact">Phone - 07921 589074</p>
+<p class="contact">Location - Brighton</p>
