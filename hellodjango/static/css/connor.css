@@ -43,24 +43,28 @@ li a{
 a{
     color: #E0E0E0;
 }
-/*.main_image{*/
-    /*height: 400px;*/
-/*}*/
-/*.description_text{*/
-    /*padding: 50px;*/
-    /*margin-left: -150px;*/
-    /*margin-top: 150px;*/
-/*}*/
-/*.row{*/
-   /*padding-bottom: 50px;*/
-/*}*/
-
+.blue_link{
+    color: dodgerblue;
+}
 .third{
     height: 33%; !important;
     padding: 0;
 }
+.skills_section
+{
+    color: blue;
+}
+.bring_down{
+    margin-top: 90px;
+}
 
-/* CUSTOMIZE THE CAROUSEL
+.contact{
+    color: white;
+    text-align: center;
+}
+
+
+/* FOR PLUGINS
 -------------------------------------------------- */
 
 /* Carousel base class */
@@ -102,10 +106,6 @@ a{
     color: #404040;
 }
 
-.contact{
-    color: white;
-    text-align: center;
-}
 
 
 
@@ -292,8 +292,4 @@ a{
             left: -14px;
             right: auto;
         }
-}
-.skills_section
-{
-    color: blue;
 }
