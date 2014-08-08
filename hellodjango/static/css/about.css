@@ -1,8 +1,8 @@
-.navbar ul li {
-	display: inline;
-	margin-top: 25px;
-	padding-left: 20px;
-}
+/*.navbar ul li {*/
+	/*display: inline;*/
+	/*margin-top: 25px;*/
+	/*padding-left: 20px;*/
+/*}*/
 
 #jordan h3 {
 	color: black;
@@ -31,9 +31,9 @@
 	text-align: center;
 }
 
-footer {
-	padding-top: 25px;
-}
+/*footer {*/
+	/*padding-top: 25px;*/
+/*}*/
 
 footer #cprght {
 	padding-left: 25px;
@@ -43,9 +43,9 @@ footer #b2t {
 	padding-right: 25px;
 }
 
-.row {
-	height:500px;
-}
+/*.row {*/
+	/*height:500px;*/
+/*}*/
 
 .us .container h2 {
 	padding-bottom: 10px;
@@ -71,7 +71,7 @@ footer #b2t {
 }
 
 .space3 {
-	height:50px;
+	height:80px;
 }
 
 #about_us {

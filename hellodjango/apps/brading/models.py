@@ -29,6 +29,7 @@ class Project(models.Model):
         (UNI, UNI),
         (HOME, HOME),
     )
+    user = models.ForeignKey(User)
     title = models.CharField(max_length=255, blank=False)
     description = models.TextField(blank=False)
     icon = models.CharField(max_length=55, choices=icon_choices, blank=False)

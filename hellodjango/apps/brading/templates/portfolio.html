@@ -1,38 +1,8 @@
-<!DOCTYPE html>
-<html>
-{% load static %}
-<link type="text/css" rel="stylesheet" href="css/font-awesome.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link type="text/css" rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+{% extends 'base.html' %}
+{% block css %}
+    {{ block.super }}
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/portfolio.css">
+{% endblock %}
+{% block content %}
+{% endblock %}
 
-<head>
-    <title>Brading Software</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-</head>
-
-<body>
-    <div class="navbar">
-        <div class="container-fluid">
-            <ul class="nav nav-pills pull-left">
-                <li><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
-                </li>
-                <li class="active"><a href="{% url 'portfolio' %}"><i class="fa fa-joomla"></i> Brading Software Portfolio</a>
-                </li>
-                <li><a href="{% url 'about' %}"><i class="fa fa-question-circle"></i> About Us and Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-    <footer>
-        <p id="b2t" class="pull-right"><a href="#">Back to top</a>
-        </p>
-        <p id="cprght">&copy; 2014 Brading Software Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-        </p>
-    </footer>
-
-</body>
-
-
-</html>

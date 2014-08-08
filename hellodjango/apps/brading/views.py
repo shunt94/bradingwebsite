@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -24,6 +24,7 @@ def portfolio(request):
     )
 
 
+#Contact in nav bar
 def about(request):
     return render_to_response(
         'about.html',
@@ -41,9 +42,15 @@ def jordan(request):
 
 
 def simon(request):
+    try:
+        simon_user = User.objects.get(username="shunt94")
+        projects = Project.objects.filter(user=simon_user)
+    except User.DoesNotExist:
+        projects = None
+
     return render_to_response(
         'simon.html',
-        {},
+        {'projects': projects},
         context_instance=RequestContext(request)
     )
 
@@ -58,7 +65,7 @@ def connor(request):
 
 def connor_pdf(request):
     response = HttpResponse(content_type='application/pdf')
-    response['Conte5nt-Disposition'] = 'attachment; filename="connor_swain_cv.pdf"'
+    response['Content-Disposition'] = 'attachment; filename="connor_swain_cv.pdf"'
 
     # Create the PDF object, using the response object as its "file."
     p = canvas.Canvas(response)
@@ -98,9 +105,15 @@ def connor_hobbies(request):
 
 
 def connor_projects(request):
+    try:
+        connor_user = User.objects.get(username="connor")
+        projects = Project.objects.filter(user=connor_user).order_by('-start_date')
+    except User.DoesNotExist:
+        projects = None
+
     return render_to_response(
         'connor/projects.html',
-        {"projects": Project.objects.all().order_by('-start_date')},
+        {"projects": projects},
         context_instance=RequestContext(request)
     )
 
