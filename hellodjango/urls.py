@@ -13,7 +13,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^connor/$', 'hellodjango.apps.brading.views.connor', name='connor'),
-    url(r'^emma/$', 'hellodjango.apps.brading.views.emma', name='emma'),
+    url(r'^simon/$', 'hellodjango.apps.brading.views.simon', name='simon'),
     url(r'^connor/private/$', 'hellodjango.apps.brading.views.connor_private',
         name="connor_private"),
     url(r'^connor/contact/$', 'hellodjango.apps.brading.views.connor_contact',

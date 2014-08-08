@@ -40,9 +40,9 @@ def jordan(request):
     )
 
 
-def emma(request):
+def simon(request):
     return render_to_response(
-        'emma.html',
+        'simon.html',
         {},
         context_instance=RequestContext(request)
     )

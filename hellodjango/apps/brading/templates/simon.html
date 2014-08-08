@@ -1,0 +1,205 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{STATIC_URL}}simon/css/animate.css">
+<link rel="stylesheet" href="{{STATIC_URL}}simon/css/window.scss">
+
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- LESS -->
+<link rel="stylesheet/less" type="text/css" href="{{STATIC_URL}}simon/less/main.less" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+
+
+
+</head>
+<body>
+<div class="back-top">
+<a href="#home">Back to Top <i class="fa fa-arrow-up"></i></a>
+</div>
+<section id="0" class="window">
+<div class="container-fluid main" id="home">
+	<div class="full-image">
+		<div>
+			<div class="center center-verticle">
+				<h1 id="intro_beauty" class="huge animated">Beautiful Design</h1>
+				<h1 id="intro_prec" class="large animated">Elegant - Soft - Fluent</h1>
+			</div>
+			<div class="center-bottom">
+				<h1 id="down-btn" class="huge center animated"><a href="#about"><i class="fa fa-angle-down"></i></a></h1>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<section id="1" class="window">
+<div class="container-fluid secondary" id="about">
+	<div class="full-image second">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="title huge animated">About Me</h1>
+			</div>
+			
+			<div class="col-md-2 col-md-offset-1">
+				<img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10407947_10204039534778943_2595468218798481293_n.jpg?oh=e995bc04b567e6287c50cc6212a67ba0&oe=5443D3E9&__gda__=1413543062_7dbb091d4e81d633bdc964ba23db19e0" class="img-circle img-responsive">
+			</div>
+			<div class="col-md-9">
+				<div class="spacer"></div>
+				<p class="lead">I am a front end website and app developer currently based in Brighton.</p>
+				<hr>
+				<a><p id="web-skills-lead" class="lead">Web Based Knowledge</p></a>
+				<p id="web-skills" class="animated fadeOutUp">HTML5, CSS3, JS, Jquery, Angular.js, Bootstrap, LESS, SASS and SCSS</p>
+				<p class="lead">Other</p>
+				<p>Java, IOS Development, Photoshop</p>
+				<p class="lead">Qualifications</p>
+				<p>2:1 Class Computer Science Degree
+
+			</div>
+			<div class="col-md-12">
+			</div>
+		</div>
+		<div class="bottom">
+				<h1 class="huge center"><a href="#projects"><i class="black fa fa-angle-down"></i></a></h1>
+			</div>
+	</div>
+</div>
+</section>
+<section id="2" class="window">
+<div class="container-fluid" id="projects">
+	<div class="full-image three">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="title huge animated">Projects</h1>
+			</div>
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								Distance Learning
+							</div>
+							<div class="panel-body">
+								Distance Learning
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								MavenRocket 
+							</div>
+							<div class="panel-body">
+								MavenRocket 
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								Brading Software
+							</div>
+							<div class="panel-body">
+								Brading Software
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								Tricky Traffic
+							</div>
+							<div class="panel-body">
+								IOS Development
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+
+
+// Set ready for intro
+$(document).ready(function(){ 
+
+	$('.window').windows({
+        snapping: true,
+        snapSpeed: 600,
+        snapInterval: 1100,
+        onScroll: function(scrollPos){
+            // scrollPos:Number
+        if(!$(window).scrollTop()) {
+			$('.back-top').hide();
+			}
+		else {
+				$('.back-top').show();
+			}
+        },
+        onSnapComplete: function($el){
+            // after window ($el) snaps into place
+        },
+        onWindowEnter: function($el){
+            // when new window ($el) enters viewport
+        }
+    });
+	$('#intro_prec').hide();
+	$('#down-btn').hide();
+	$('.back-top').hide();
+	$('#web-skills').hide();
+	$('#intro_beauty').addClass("fadeInDown");
+	setTimeout("fadePrec()", 2000);
+	setTimeout("fadeDownBtn()", 3000);
+});
+
+// Smooth Scrolling 
+
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+}); 
+
+// Faded Intro Scenes
+function fadePrec() {
+	$('#intro_prec').show();
+	$('#intro_prec').addClass("fadeInUp");
+}
+
+function fadeDownBtn() {
+	$('#down-btn').show();
+	$('#down-btn').addClass("fadeIn");
+}
+
+$('#web-skills-lead').click( function() {
+	$('#web-skills').show();
+	$('#web-skills').toggleClass("fadeOutUp");
+	$('#web-skills').toggleClass("fadeInDown");
+});
+
+
+</script>
+<script src="{{STATIC_URL}}simon/js/jquery.windows.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
