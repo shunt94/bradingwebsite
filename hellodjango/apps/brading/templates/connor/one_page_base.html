@@ -8,6 +8,7 @@
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/connor.css' %}" rel="stylesheet">
     <link href="{% static 'css/onepage-scroll.css' %}" rel="stylesheet">
+    <link href="{% static 'css/connor_hobbies.css' %}" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -15,44 +16,40 @@
     {% include 'connor/include/connor_side_bar.html' %}
 </div>
 <div class="main">
-<section>
-<div class="col-md-12 hidden-md hidden-lg">
-        {% include 'connor/include/mobile_nav_bar.html' %}
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col-md-10  col-md-offset-2 column" id="main_content">
-            {% block first_section %}
-            {% endblock %}
+    <section class="snowboarding">
+        <div class="col-md-12 hidden-md hidden-lg">
+            {% include 'connor/include/mobile_nav_bar.html' %}
         </div>
-	</div>
-</div>
-
-</section>
-<section>
-<div class="container">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-2 column" id="main_content">
-
-    {% block second_section %}
-    {% endblock %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10  col-md-offset-2 column" id="main_content">
+                    {% block first_section %}
+                    {% endblock %}
+                </div>
+            </div>
         </div>
-	</div>
-</div>
-
-</section>
-<section>
-    <div class="container">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-2 column" id="main_content">
-
-    {% block third_section %}
-    {% endblock %}
+    </section>
+    <section class="climbing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-2 column" id="main_content">
+                    {% block second_section %}
+                    {% endblock %}
+                </div>
+            </div>
         </div>
-	</div>
-</div>
-</section>
-    </div> <!--main-->
+    </section>
+    <section class="football">
+        <div class="container">
+	        <div class="row">
+		        <div class="col-md-10 col-md-offset-2 column" id="main_content">
+                    {% block third_section %}
+                    {% endblock %}
+                </div>
+	        </div>
+        </div>
+    </section>
+</div> <!--main-->
 </body>
 {% block js %}
 {% load static %}

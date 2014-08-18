@@ -1,21 +1,20 @@
-{% extends 'connor/base.html' %}
-{% block css %}
-    {{ block.super }}
-    {% load static %}
-    <link href="{% static 'css/connor_hobbies.css' %}" rel="stylesheet">
+{% extends 'connor/one_page_base.html' %}
+{% block first_section %}
+<div class="row">
+    <div class="col-md-12">
+
+    </div>
+</div>
 {% endblock %}
-{% block content %}
-<div class="row full-height snowboarding">
+{% block second_section %}
+<div class="row">
     <div class="col-md-12">
 
     </div>
 </div>
-<div class="row full-height climbing">
-    <div class="col-md-12">
-
-    </div>
-</div>
-<div class="row full-height football">
+{% endblock %}
+{% block third_section %}
+<div class="row">
     <div class="col-md-12">
 
     </div>
