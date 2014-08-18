@@ -1,0 +1,28 @@
+.third{
+    height: 33.333333333%;
+}
+.red{
+    background-color: red;
+}
+.snowboarding{
+   background: url("https://scontent-b-lhr.xx.fbcdn.net/hphotos-xpa1/t1.0-9/1472756_10152083147549100_970776031_n.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.climbing{
+   background: url("http://s15.postimg.org/50h816y3v/P1010908.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.football{
+   background: url("http://news.bbcimg.co.uk/media/images/74215000/jpg/_74215912_484568505.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

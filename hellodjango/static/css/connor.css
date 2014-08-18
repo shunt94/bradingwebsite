@@ -46,10 +46,6 @@ a{
 .blue_link{
     color: dodgerblue;
 }
-.third{
-    height: 33%; !important;
-    padding: 0;
-}
 .skills_section
 {
     color: blue;
@@ -60,6 +56,9 @@ a{
 .contact{
     color: white;
     text-align: center;
+}
+.full-height{
+    height:100%;
 }
 
 

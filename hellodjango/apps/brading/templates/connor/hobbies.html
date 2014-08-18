@@ -1,12 +1,23 @@
 {% extends 'connor/base.html' %}
+{% block css %}
+    {{ block.super }}
+    {% load static %}
+    <link href="{% static 'css/connor_hobbies.css' %}" rel="stylesheet">
+{% endblock %}
 {% block content %}
-<div class="row third" style="background-color: red">
-    <div class="col-md-12"></div>
+<div class="row full-height snowboarding">
+    <div class="col-md-12">
+
+    </div>
 </div>
-<div class="row third" style="background-color: blue">
-    <div class="col-md-12"></div>
+<div class="row full-height climbing">
+    <div class="col-md-12">
+
+    </div>
 </div>
-<div class="row third" style="background-color: green">
-    <div class="col-md-12"></div>
+<div class="row full-height football">
+    <div class="col-md-12">
+
+    </div>
 </div>
 {% endblock %}
