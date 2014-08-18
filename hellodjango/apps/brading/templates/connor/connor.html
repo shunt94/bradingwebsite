@@ -1,51 +1,57 @@
 {% extends 'connor/one_page_base.html' %}
 {% block first_section %}
-<div class="row clearfix">
-    <div class="col-md-6">
-        <img src="http://s27.postimg.org/o18eyl44z/myskills.jpg" class="img-responsive main_image">
+<div class="row">
+     <div class="col-md-6 hidden-md hidden-lg" style="margin-top: 50px;">
+        <img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpa1/t1.0-9/p720x720/1555285_10151894395021778_407212263_n.jpg" alt="Connor Swain" class="img-circle connor_pic">
     </div>
-    <div class="col-md-6">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p class="lead description_text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <div class="col-md-6" style="margin-top:50px;">
+        <p class="lead description_text">Highly motivated and proactive student and developer, both technically capable and business aware, looking to build experience and deliver results in an international commercial environment.</p>
+        <p class="lead">Skilled <span class="bold">Django</span>, <span class="bold">Python</span> and <span class="bold">MySQL</span> developer, with multiple successful completed <a class="blue_link" href="{% url 'connor_projects' %}">applications</a> working closely with Google Adwords and instant messaging.</p>
+        <p class="lead">Particularly interested in looking more into "Smart-home" technologies relying on machine to machine communication</p>
+    </div>
+
+    <div class="col-md-6 hidden-sm hidden-xs" style="margin-top: 250px;">
+        <img src="http://s27.postimg.org/o18eyl44z/myskills.jpg" class="img-responsive main_image">
     </div>
 </div>
 {% endblock %}
 {% block second_section %}
     <br>
     <br>
-<div class="row clearfix">
+<div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-        <div class="panel panel-default">
-          <div class="panel-heading text-center">Singing Horse Studio</div>
-          <div class="panel-body text-center">
-            <p>Junior Software Engineer</p>
-            <p>2013 - Present</p>
-          </div>
-        </div>
 
-        <div class="panel panel-default">
-          <div class="panel-heading text-center">Abracadabra Leaflet Distribution</div>
-          <div class="panel-body text-center">
-            <p>Leaflet Distributor</p>
-            <p>2012-2013</p>
+      <div class="panel panel-default">
+          <div class="panel-heading text-center">Brading Software<small class="text-muted pull-right">2014 - Present</small></div>
+          <div class="panel-body">
+            <p>I founded Brading Software in the summer of 2014 with 2 coursemates to enhance both our web application and android skills, as well as gain invaluable experience in running and managing a small company. I am responsible for both managing projects with clients and developing the Django  back-end to interact with both the website and the apps using RESTful API’s. </p>
           </div>
         </div>
 
 
         <div class="panel panel-default">
-          <div class="panel-heading text-center">Matalan</div>
-          <div class="panel-body text-center">
-            <p>Sales Assistant</p>
-            <p>2012-2013</p>
+          <div class="panel-heading text-center">Singing Horse Studio<small class="text-muted pull-right">2013 - Present</small></div>
+          <div class="panel-body">
+            <p>Working as a Junior Software Engineer, I work with a front-end developer coding Django applications both internally and for clients such as the University of Sussex. I have used my strong python and mathematical skills to work on algorithms taking data from the Google Adwords API to optimize users adverts as well as develop a distance learning application.</p>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default">
+          <div class="panel-heading text-center">Abracadabra Leaflet Distribution<small class="text-muted pull-right">2012 - 2013</small></div>
+          <div class="panel-body">
+            <p>I was responsible for leaflet delivery across a wide geographic area, including tracking and reporting on progress and results. In this self-employed role, I had to plan the most efficient routes and approach to optimise my time and the resulting reward.</p>
+            <p></p>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default">
+          <div class="panel-heading text-center">Matalan<small class="text-muted pull-right">2012 - 2013</small></div>
+          <div class="panel-body">
+            <p>I undertook a variety of roles including checkout, customer service and stock management. My main responsibilities were to drive sales and resolve issues by engaging with customers. I exceeded all my targets including the storecard take-up rate and customer conversion targets</p>
+            <p></p>
           </div>
         </div>
     </div>
@@ -53,7 +59,7 @@
 </div>
 {% endblock %}
 {% block third_section %}
-<div class="row clearfix">
+<div class="row">
     <div class="col-md-12">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
