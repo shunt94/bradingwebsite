@@ -13,9 +13,6 @@ body, html {
 	overflow: auto;
     color: #fff;
 }
-.full-background h1 {
-	padding-top: 70px; 
-}
 
 .navbar {
 	margin-bottom:  0;
