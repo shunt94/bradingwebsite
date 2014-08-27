@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
 {% block css %}
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}/css/index.css">
- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
- <link rel="icon" type="image/png" href="http://www.beachballs.com/images/AD_36_Rainbow.png">
+<link rel='stylesheet' href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel='stylesheet' href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel='stylesheet' type="text/css" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+<link rel='stylesheet' type="text/css" href="{{ STATIC_URL }}/css/index.css">
+    
+<link rel="icon" type="image/png" href="http://www.beachballs.com/images/AD_36_Rainbow.png">
 {% endblock %}
 <head>
-    <title>Brading Software</title>
+    <title>Brading Software LTD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
     {% include 'include/header.html' %}
     {% block content %}
     {% endblock %}
+    
     {% block footer %}
      <footer>
-        <p id="b2t" class="pull-right"><a href="#">Back to top</a>
-        </p>
-        <p id="cprght">&copy; 2014 Brading Software Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-        </p>
+        <div class="container-fluid">
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2014 Brading Software Inc. &middot;</p>
+        </div>
      </footer>
     {% endblock %}
 </body>

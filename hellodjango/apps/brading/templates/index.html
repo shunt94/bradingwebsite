@@ -1,21 +1,25 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+
 {% block content %}
-    <div class="jumbotron">
-        <h1>Brading Software</h1>
-    </div>
-    <div class="space1"></div>
-    <div class="container">
-        <h1>What we do...</h1>
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Finalists at the University of Sussex working towards a Bachelors in Computer Science.</h2>
-                <p class="lead">As well as our degrees, we actively spend our free time developing applications, websites and are always looking for ways to improve our skills.</p>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-responsive" src="http://www.essex.ac.uk/ldev/images/US_Logo_Standard_use_RGB_Flint.jpg">
-            </div>
+<div class="jumbotron full-background">
+    <div class="space1 hidden-xs hidden-sm"></div>
+    <h1 class="light">Brading Software <span class="headline-small hidden-xs">LTD</span></h1>
+</div>
+<div class="space1"></div>
+<div class="container">
+    <h1>What we do...</h1>
+    <div class="space3"></div>
+    <div class="row">
+        <div class="col-md-7">
+            <h2 >Finalists at the University of Sussex working towards a Bachelors in Computer Science.</h2>
+            <p class="lead">As well as our degrees, we actively spend our free time developing applications, 
+                            websites and are always looking for ways to improve our skills.
+            </p>
         </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="http://www.essex.ac.uk/ldev/images/US_Logo_Standard_use_RGB_Flint.jpg">
+        </div>
+    </div>
         <hr class="featurette-divider">
         <div class="row featurette">
             <div class="col-md-5">
@@ -36,10 +40,16 @@
                 <img class="featurette-image img-responsive" src="http://us.cdn3.123rf.com/168nwm/kbuntu/kbuntu1108/kbuntu110800106/10227385-magnifying-glass-with-the-word-future-on-white-background.jpg">
             </div>
         </div>
-        <hr class="featurette-divider">
     </div>
+    <hr class="featurette-divider">
+</div>
 
-     {% block footer %}
-    <p id="cc"><a href="http://www.flickr.com/photos/jp_london/1012935875">"Sunset in Brighton"</a> is copyright (c) 2007 //joao paulo and made available under a <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons license.</a></p>
-     {% endblock %}
+
+{% endblock %} 
+
+{% block footer %}
+<p class="cc">
+    <a href="http://www.flickr.com/photos/jp_london/1012935875">"Sunset in Brighton"</a>is copyright (c) 2007 //joao paulo and made available under
+    <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons license.</a>
+</p>
 {% endblock %}
