@@ -1,0 +1,87 @@
+<html>
+<head>
+{% block css %}
+<!-- SCSS - CSS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{STATIC_URL}}simon/css/animate.css">
+<link rel="stylesheet" href="{{STATIC_URL}}simon/css/window.scss">
+<link rel="stylesheet" href="{{STATIC_URL}}simon/css/main.css">
+
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{% endblock %}
+
+
+
+
+</head>
+<body>
+{% block content %}
+{% endblock %}
+
+{% block scripts %}
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+
+
+// Set ready for intro
+$(document).ready(function(){ 
+
+	$('.window').windows({
+        snapping: true,
+        snapSpeed: 600,
+        snapInterval: 1100,
+        onScroll: function(scrollPos){
+            // scrollPos:Number
+        if(!$(window).scrollTop()) {
+			$('.back-top').hide();
+			}
+		else {
+				$('.back-top').show();
+			}
+        },
+        onSnapComplete: function($el){
+            // after window ($el) snaps into place
+        },
+        onWindowEnter: function($el){
+            // when new window ($el) enters viewport
+        }
+    });
+	$('#intro_prec').hide();
+	$('#down-btn').hide();
+	$('.back-top').hide();
+	$('#web-skills').hide();
+	$('#intro_beauty').addClass("fadeInDown");
+	setTimeout("fadePrec()", 2000);
+	setTimeout("fadeDownBtn()", 3000);
+});
+
+// Smooth Scrolling 
+
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+}); 
+</script>
+
+<script src="{{STATIC_URL}}simon/js/jquery.windows.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+{% endblock %}
+
+</body>
+</html>
