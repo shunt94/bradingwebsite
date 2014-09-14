@@ -52,13 +52,7 @@ $(document).ready(function(){
             // when new window ($el) enters viewport
         }
     });
-	$('#intro_prec').hide();
-	$('#down-btn').hide();
-	$('.back-top').hide();
-	$('#web-skills').hide();
-	$('#intro_beauty').addClass("fadeInDown");
-	setTimeout("fadePrec()", 2000);
-	setTimeout("fadeDownBtn()", 3000);
+
 });
 
 // Smooth Scrolling 
@@ -81,6 +75,7 @@ $(function() {
 
 <script src="{{STATIC_URL}}simon/js/jquery.windows.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
 {% endblock %}
 
 </body>

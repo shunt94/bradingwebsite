@@ -3,39 +3,36 @@ body {
 }
 
 p {
-	font-weight: normal;
+	font-weight: 100;
 	font-size: 16px;
 	&.lead {
 		font-weight: thin;
 		font-size: 26px;
 	}
 }
-.full-image {
-	margin-left: -15px;
-	margin-right: -15px;
+.window {
 	height: 100%;
-	background-color: #0784f2;
-	&.second {
-		background-color: #ffffff;
+	&.blue {
+		background-color: #0784f2;
+		color: #fff;
 	}
-	&.three {
-		background-color: #a55bfa;
+	&.white {
+		background-color: #ffffff;
+		color: #333;
+	}
+	&.blur_1 {
+		background: url("/static/simon/img/blur_1.jpg");
+		color: #fff;
+	}
+	&.purple {
+		background-color: #a55afa;
 	}
 }
 
-.container-fluid {
-	&.main {
-		color: #fff;
-	}
-	&.secondary {
-		color: #000;
-	}
-}
 .title {
 	padding-bottom: 40px;
 }
 h1 {
-	font-family: 'Lato', sans-serif;
 	font-weight: 100;
 	&.huge {
 		font-size: 72px;
@@ -43,13 +40,8 @@ h1 {
 	&.large {
 		font-size: 56px;
 	}
-	
-
-	
 	a {
 		color: #fff;
-		
-		
 		&:hover {
 			color: #d8d8d8;
 		}
@@ -59,13 +51,8 @@ h1 {
 
 
 
-.center {
-	text-align: center;
-}
-
-.centered {
-	margin: 0 auto;
-}
+.center { text-align: center; }
+.centered { margin: 0 auto; }
 
 .spacer {
 	padding-top: 30px;
@@ -89,6 +76,8 @@ h1 {
 
 .row {
 	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .center-bottom {
@@ -112,14 +101,35 @@ h1 {
 	}
 }
 
-.black {
-	color: #333;
+.sub-title{
+	opacity: 0.5;
+}
+
+.skills-body {
+	font-size: 18px;
 	
-	&:hover {
-		color: #a0a0a0;
+	& i { 
+		color: #458cef;
 	}
 }
 
-.panel {
-	box-shadow: 1px 1px 3px #575757;
+.heading h1 {
+	font-weight: 300;
+}
+
+.black {
+	color: #333;
+}
+.red {
+	color: #f82525;
+}
+
+.transparent {
+	opacity: 0.4;
+}
+
+.skill {
+	padding-bottom: 8px;
+	padding-right: 30px;
+	padding-left: 5px;
 }

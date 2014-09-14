@@ -1,32 +1,8 @@
 {% extends 'simon/simon_base.html' %} 
-{% block content %}
-<div class="back-top">
-<a href="#home">Back to Top <i class="fa fa-arrow-up"></i></a>
-</div>
-<section id="0" class="window">
-<div class="container-fluid main" id="home">
-	<div class="full-image">
-		<div>
-			<div class="center center-verticle">
-				<h1 id="intro_beauty" class="huge animated">Beautiful Design</h1>
-				<h1 id="intro_prec" class="large animated">Imagination is the limit</h1>
-			</div>
-			<div class="center-bottom">
-				<h1 id="down-btn" class="huge center animated"><a href="#about"><i class="fa fa-angle-down"></i></a></h1>
-			</div>
-		</div>
-	</div>
-</div>
-</section>
-<section id="3" class="window">
-
-	
-
-</section>
-{% endblock %}
 
 
 {% block scripts %}
+{{block.super}}
 <script>
 
 // Faded Intro Scenes
@@ -40,11 +16,160 @@ function fadeDownBtn() {
 	$('#down-btn').addClass("fadeIn");
 }
 
+function fadeUpSub() {
+	$('.sub-title').show();
+}
+
 $('#web-skills-lead').click( function() {
 	$('#web-skills').show();
 	$('#web-skills').toggleClass("fadeOutUp");
 	$('#web-skills').toggleClass("fadeInDown");
 });
 
+	$('.sub-title').hide();
+	$('#intro_prec').hide();
+	$('#down-btn').hide();
+	$('.back-top').hide();
+	$('#web-skills').hide();
+	$('#intro_beauty').addClass("fadeInDown");
+	setTimeout("fadePrec()", 2000);
+	setTimeout("fadeDownBtn()", 3000);
+	setTimeout("fadeUpSub()", 4000);
+
+
 </script>
 {% endblock %}
+
+{% block content %}
+<div class="back-top">
+<a href="#home">Back to Top <i class="fa fa-arrow-up"></i></a>
+</div>
+<section class="window blur_1">
+	<div class="row" id="home">
+		<div class="center center-verticle">
+			<h1 id="intro_beauty" class="huge animated">Beautiful Design</h1>
+			<h1 id="intro_prec" class="large animated">Imagination is the limit</h1>
+			<p id="intro-sub" class="sub-title animated">Front-End Developer - UI Designer - Contractor</p>
+			<div class="spacer larger"></div>
+			<p class="sub-title">Developer at Singing Horse Studios LLP</p>
+			<p class="sub-title">Director & Developer at Brading Software LTD</p>
+		</div>
+		<div class="center-bottom">
+			<h1 id="down-btn" class="huge center animated"><a href="#skills"><i class="fa fa-angle-down"></i></a></h1>
+		</div>
+	</div>
+</section>
+
+
+<section class="window white" id="skills">
+<div class="container">
+	<div class="row">
+		<div class="spacer large"></div>
+		<div class="col-md-6">
+			<div>
+				<div class="heading">
+					<h1 class="large"><i class="fa fa-pencil"></i> Creativity</h1>
+				</div>
+				
+				<div class="spacer"></div>
+				<div class="skills-body">
+					<div class="skill">
+						<span>Photoshop</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
+						</span>
+					</div>
+					<div class="skill">
+						<span>Design</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
+						</span>
+					</div>
+					<div class="skill">
+						<span>Creativity</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
+						</span>
+					</div>
+					<div class="skill">
+						<span>Music</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
+						</span>
+					</div>
+					<div class="skill">
+						<span>Logo Design</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>
+						</span>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div>
+				<div class="heading">
+					<h1 class="large"><i class="fa fa-cog"></i> Development</h1>
+				</div>
+				
+				<div class="spacer"></div>
+				<div class="skills-body">
+					<div class="skill">
+						<span>HTML5/CSS</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
+						</span>
+					</div>
+					<div class="skill">
+						<span>Javascript</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>				</span>
+					</div>
+					<div class="skill">
+						<span>Jquery</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>				</span>
+					</div>
+					<div class="skill">
+						<span>Bootstrap</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>						</span>
+					</div>
+					<div class="skill">
+						<span>LESS</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>				</span>
+					</div>
+					<div class="skill">
+						<span>SCSS</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i>		</span>
+					</div>
+					<div class="skill">
+						<span>Django Front End Integration</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>		</span>
+					</div>
+					<div class="skill">
+						<span>Angular JS</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i>		</span>
+					</div>
+					<div class="skill">
+						<span>Phonegap</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i>		</span>
+					</div>
+					
+					<div class="skill">
+						<span>Git</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>		</span>
+					</div>
+					
+					<div class="skill">
+						<span>Mecurial</span><span class="pull-right">
+							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>		</span>
+					</div>
+					
+					
+					
+				</div>
+				
+				
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+</section>
+{% endblock %}
+
