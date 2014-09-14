@@ -2,6 +2,13 @@ body, html {
 	height: 100%;
     font-family: 'Lato', sans-serif;
 }
+
+.main {
+	height: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .light {
     font-weight: 100;
 }
@@ -13,6 +20,7 @@ body, html {
 	overflow: auto;
     color: #fff;
 }
+
 
 .navbar {
 	margin-bottom:  0;
