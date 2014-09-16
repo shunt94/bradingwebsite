@@ -38,7 +38,7 @@
 	
 	
 	// Fade in skill sets
-	$( ".skill" ).find( "i" ).first().fadeIn();
+	//$( ".skill" ).find( "i" ).first().fadeIn();
 	
 	/*
 	
@@ -71,6 +71,21 @@
 	});
 	*/
 	
+	
+	$('skill').each( function() {
+	
+		var fillCount = $(this).data("rating");
+		for(i = 0; i < fillCount; i++) {
+			$(this).children( ".skill-rating" ).append("<i class='fa fa-circle'></i>");
+		}
+		for(i = 0; i < 5-fillCount; i++) {
+			$(this).children( ".skill-rating" ).append("<i class='fa fa-circle-thin'></i>");
+		}
+		
+		
+		
+	});
+	
 </script>
 {% endblock %}
 
@@ -95,18 +110,6 @@
 </section>
 
 
-<section class="test">
-
-{% for skill in skills %}
-	{{skill.option}} <br>
-	{{skill.name}} <br>
-	{{skill.rating}} <br>
-
-{% endfor %}
-
-</section>
-
-
 
 <section class="window white" id="skills">
 <div class="container">
@@ -120,33 +123,14 @@
 				
 				<div class="spacer"></div>
 				<div class="skills-body">
-					<div class="skill">
-						<span>Photoshop</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
-						</span>
+				{% for skill in skills %}
+					{% if skill.option == 'Creativity' %}
+					<div class="skill" data-rating='{{skill.rating}}'>
+						<span>{{skill.name}}</span><span class="pull-right skill-rating"></span>
 					</div>
-					<div class="skill">
-						<span>Design</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
-						</span>
-					</div>
-					<div class="skill">
-						<span>Creativity</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
-						</span>
-					</div>
-					<div class="skill">
-						<span>Music</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
-						</span>
-					</div>
-					<div class="skill">
-						<span>Logo Design</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>
-						</span>
-					</div>
+					{% endif%}
+				{% endfor %}
 				</div>
-				
 			</div>
 		</div>
 		<div class="col-md-6">
@@ -156,60 +140,15 @@
 				</div>
 				
 				<div class="spacer"></div>
-				<div class="skills-body">
-					<div class="skill">
-						<span>HTML5/CSS</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
-						</span>
+				<div class="skills-body">					
+				{% for skill in skills %}
+					{% if skill.option == 'Development' %}
+					<div class="skill" data-rating='{{skill.rating}}'>
+						<span>{{skill.name}}</span><span class="pull-right skill-rating"></span>
 					</div>
-					<div class="skill">
-						<span>Javascript</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>				</span>
-					</div>
-					<div class="skill">
-						<span>Jquery</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>				</span>
-					</div>
-					<div class="skill">
-						<span>Bootstrap</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>						</span>
-					</div>
-					<div class="skill">
-						<span>LESS</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>				</span>
-					</div>
-					<div class="skill">
-						<span>SCSS</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i>		</span>
-					</div>
-					<div class="skill">
-						<span>Django Front End Integration</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>		</span>
-					</div>
-					<div class="skill">
-						<span>Angular JS</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i>		</span>
-					</div>
-					<div class="skill">
-						<span>Phonegap</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i>		</span>
-					</div>
-					
-					<div class="skill">
-						<span>Git</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>		</span>
-					</div>
-					
-					<div class="skill">
-						<span>Mecurial</span><span class="pull-right">
-							<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i>		</span>
-					</div>
-					
-					
-					
+					{% endif%}
+				{% endfor %}					
 				</div>
-				
-				
 			</div>
 		</div>
 		
