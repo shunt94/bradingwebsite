@@ -40,3 +40,16 @@ class Project(models.Model):
 
     def __unicode__(self):
         return self.title
+        
+
+class Skill(models.Model):
+	CREATIVITY='Creativity'
+	DEVELOPMENT='Development'
+	choices = (
+		(CREATIVITY, CREATIVITY),
+		(DEVELOPMENT, DEVELOPMENT)
+	)
+	name = models.CharField(max_length=255)
+	rating = models.IntegerField()
+	option = models.CharField(max_length=20, choices=choices)
+	

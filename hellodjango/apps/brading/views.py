@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group, User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from hellodjango.apps.brading.models import Bookmark, List, Project
+from hellodjango.apps.brading.models import Bookmark, List, Project, Skill
 from reportlab.pdfgen import canvas
 from django.http import HttpResponse
 
@@ -50,7 +50,8 @@ def simon(request):
 
     return render_to_response(
         'simon.html',
-        {'projects': projects},
+        {'projects': projects,
+         'skills': Skill.objects.all()},
         context_instance=RequestContext(request)
     )
 

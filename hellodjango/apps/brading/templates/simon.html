@@ -5,26 +5,26 @@
 {{block.super}}
 <script>
 
-// Faded Intro Scenes
-function fadePrec() {
-	$('#intro_prec').show();
-	$('#intro_prec').addClass("fadeInUp");
-}
-
-function fadeDownBtn() {
-	$('#down-btn').show();
-	$('#down-btn').addClass("fadeIn");
-}
-
-function fadeUpSub() {
-	$('.sub-title').show();
-}
-
-$('#web-skills-lead').click( function() {
-	$('#web-skills').show();
-	$('#web-skills').toggleClass("fadeOutUp");
-	$('#web-skills').toggleClass("fadeInDown");
-});
+	// Faded Intro Scenes
+	function fadePrec() {
+		$('#intro_prec').show();
+		$('#intro_prec').addClass("fadeInUp");
+	}
+	
+	function fadeDownBtn() {
+		$('#down-btn').show();
+		$('#down-btn').addClass("fadeIn");
+	}
+	
+	function fadeUpSub() {
+		$('.sub-title').fadeIn();
+	}
+	
+	$('#web-skills-lead').click( function() {
+		$('#web-skills').show();
+		$('#web-skills').toggleClass("fadeOutUp");
+		$('#web-skills').toggleClass("fadeInDown");
+	});
 
 	$('.sub-title').hide();
 	$('#intro_prec').hide();
@@ -32,11 +32,45 @@ $('#web-skills-lead').click( function() {
 	$('.back-top').hide();
 	$('#web-skills').hide();
 	$('#intro_beauty').addClass("fadeInDown");
-	setTimeout("fadePrec()", 2000);
-	setTimeout("fadeDownBtn()", 3000);
-	setTimeout("fadeUpSub()", 4000);
+	setTimeout("fadePrec()", 800);
+	setTimeout("fadeDownBtn()", 1300);
+	setTimeout("fadeUpSub()", 2000);
+	
+	
+	// Fade in skill sets
+	$( ".skill" ).find( "i" ).first().fadeIn();
+	
+	/*
+	
+	function fadeInSkill(idex) {
+		$( ".skill i:nth-child(" + idex + ")" ).hide();
+		$( ".skill i:nth-child(" + idex + ")" ).removeClass("fa-circle-thin");
+		$( ".skill i:nth-child(" + idex + ")" ).addClass("fa-circle");
+		$( ".skill i:nth-child(" + idex + ")" ).fadeIn();
+	}
+	setTimeout("fadeInSkill(1)", 500);
+	setTimeout("fadeInSkill(2)", 1000);
+	setTimeout("fadeInSkill(3)", 1500);
+	setTimeout("fadeInSkill(4)", 2000);
+	setTimeout("fadeInSkill(5)", 2500);
 
-
+	
+	$('.skill').each( function() { 
+		for(i = 0; i < 5; i++) {
+			$(this).append("<i class='fa fa-circle-thin'></i>");
+		}
+	});
+	
+	$('.skill i').each( function() {
+		var fillCount = $('.skill').data("skill");
+		for(i = 0; i < fillCount; i++) {
+			$(this).removeClass("fa-circle-thin");
+			
+		}
+		
+	});
+	*/
+	
 </script>
 {% endblock %}
 
@@ -59,6 +93,19 @@ $('#web-skills-lead').click( function() {
 		</div>
 	</div>
 </section>
+
+
+<section class="test">
+
+{% for skill in skills %}
+	{{skill.option}} <br>
+	{{skill.name}} <br>
+	{{skill.rating}} <br>
+
+{% endfor %}
+
+</section>
+
 
 
 <section class="window white" id="skills">
