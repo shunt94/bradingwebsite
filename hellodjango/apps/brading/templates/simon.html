@@ -3,6 +3,7 @@
 
 {% block scripts %}
 {{block.super}}
+<script src="{{STATIC_URL}}simon/js/jquery.appear.js"></script>
 <script>
 
 	// Faded Intro Scenes
@@ -37,55 +38,56 @@
 	setTimeout("fadeUpSub()", 2000);
 	
 	
-	// Fade in skill sets
-	//$( ".skill" ).find( "i" ).first().fadeIn();
 	
-	/*
-	
-	function fadeInSkill(idex) {
-		$( ".skill i:nth-child(" + idex + ")" ).hide();
-		$( ".skill i:nth-child(" + idex + ")" ).removeClass("fa-circle-thin");
-		$( ".skill i:nth-child(" + idex + ")" ).addClass("fa-circle");
-		$( ".skill i:nth-child(" + idex + ")" ).fadeIn();
-	}
-	setTimeout("fadeInSkill(1)", 500);
-	setTimeout("fadeInSkill(2)", 1000);
-	setTimeout("fadeInSkill(3)", 1500);
-	setTimeout("fadeInSkill(4)", 2000);
-	setTimeout("fadeInSkill(5)", 2500);
-
-	
-	$('.skill').each( function() { 
-		for(i = 0; i < 5; i++) {
-			$(this).append("<i class='fa fa-circle-thin'></i>");
-		}
-	});
-	
-	$('.skill i').each( function() {
-		var fillCount = $('.skill').data("skill");
-		for(i = 0; i < fillCount; i++) {
-			$(this).removeClass("fa-circle-thin");
-			
-		}
-		
-	});
-	*/
 	
 	
 	$('.skill').each( function() {
-	
-		var fillCount = $(this).data("rating");
-		for(i = 0; i < fillCount; i++) {
-			$(this).children( ".skill-rating" ).append("<i class='fa fa-circle'></i>");
-		}
-		for(i = 0; i < 5-fillCount; i++) {
-			$(this).children( ".skill-rating" ).append("<i class='fa fa-circle-thin'></i>");
-		}
-		
-		
-		
+			for(i = 0; i < 5; i++) {
+				$(this).children( ".skill-rating" ).append("<i class='fa fa-circle-thin'></i>");
+			}	
 	});
 	
+	
+
+	function fadeInSkills() {
+		console.log("asd");
+		var i = 1;
+		circleFill();
+		function circleFill() {
+			$('.skill').each( function() {
+				var fillCount = $(this).data("rating");
+				var counter = $(this).data("counter");
+				if(fillCount != counter) {
+					$(".skill-rating i:nth-child("+i+")", this ).removeClass("fa-circle-thin");
+					$(".skill-rating i:nth-child("+i+")", this ).addClass("fa-circle");
+					$(".skill-rating i:nth-child("+i+")", this ).css("opacity", "0.3");
+					$(".skill-rating i:nth-child("+i+")", this ).animate({opacity:1},200);
+					$(this).data("counter", i)
+				}
+			});
+			i++;
+			if(i <= 5) {
+				setTimeout(circleFill, 150)	
+			}
+			
+			
+		}
+	}
+
+
+
+
+	$(function() {
+
+	
+	  	$('.skills-body').appear();
+	
+	  	$(document.body).on('appear', '.skills-body', function(e, $affected) {
+	    	setTimeout(fadeInSkills, 500);
+		});
+	});
+
+
 </script>
 {% endblock %}
 
@@ -113,7 +115,7 @@
 
 <section class="window white" id="skills">
 <div class="container">
-	<div class="row">
+	<div class="row" id="skills_window">
 		<div class="spacer large"></div>
 		<div class="col-md-6">
 			<div>
@@ -125,7 +127,7 @@
 				<div class="skills-body">
 				{% for skill in skills %}
 					{% if skill.option == 'Creativity' %}
-					<div class="skill" data-rating='{{skill.rating}}'>
+					<div class="skill" data-counter="0" data-rating='{{skill.rating}}'>
 						<span>{{skill.name}}</span><span class="pull-right skill-rating"></span>
 					</div>
 					{% endif%}
