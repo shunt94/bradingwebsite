@@ -11,40 +11,26 @@
 		$('#intro_prec').show();
 		$('#intro_prec').addClass("fadeInUp");
 	}
-	
-	function fadeDownBtn() {
-		$('#down-btn').show();
-		$('#down-btn').addClass("fadeIn");
-	}
-	
 	function fadeUpSub() {
 		$('.sub-title').fadeIn();
 	}
-	
-	$('#web-skills-lead').click( function() {
-		$('#web-skills').show();
-		$('#web-skills').toggleClass("fadeOutUp");
-		$('#web-skills').toggleClass("fadeInDown");
-	});
 
 	$('.sub-title').hide();
 	$('#intro_prec').hide();
 	$('#down-btn').hide();
 	$('.back-top').hide();
-	$('#web-skills').hide();
 	$('#intro_beauty').addClass("fadeInDown");
-	setTimeout("fadePrec()", 800);
-	setTimeout("fadeDownBtn()", 1300);
-	setTimeout("fadeUpSub()", 2000);
+	setTimeout("fadePrec()", 500);
+	setTimeout("fadeUpSub()", 1500);
 	
 	
 	
 	
 	
 	$('.skill').each( function() {
-			for(i = 0; i < 5; i++) {
-				$(this).children( ".skill-rating" ).append("<i class='fa fa-circle-thin'></i>");
-			}	
+		for(i = 0; i < 5; i++) {
+			$(this).children( ".skill-rating" ).append("<i class='fa fa-circle-thin'></i>");
+		}	
 	});
 	
 	
@@ -66,7 +52,7 @@
 			});
 			i++;
 			if(i <= 5) {
-				setTimeout(circleFill, 180)	
+				setTimeout(circleFill, 100)	
 			}
 			
 			
@@ -77,13 +63,19 @@
 
 
 	$(function() {
-
-	
-	  	$('.skills-body').appear();
-	
-	  	$(document.body).on('appear', '.skills-body', function(e, $affected) {
-	    	setTimeout(fadeInSkills, 500);
+	  	$('#skills-body').appear();
+	  	$('#skills-body').on('appear', function(e, $affected) {
+	    	setTimeout(fadeInSkills, 700);
 		});
+	});
+	
+	$('#submit').click( function() {
+		if($('#InputReal').val()=="7") {
+			$('#contact_form').submit();
+		}
+		else {
+			alert("Wrong!");
+		}
 	});
 
 
@@ -100,63 +92,174 @@
 			<h1 id="intro_beauty" class="huge animated">Beautiful Design</h1>
 			<h1 id="intro_prec" class="large animated">Imagination is the limit</h1>
 			<p id="intro-sub" class="sub-title animated">Front-End Developer - UI Designer - Contractor</p>
-			<div class="spacer larger"></div>
+			<div class="spacer"></div>
+			<div class="sub-title" style="opacity: 0.95;"><h2><i class="fa fa-mobile"></i> <i class="fa fa-tablet"></i> <i class="fa fa-laptop"></i> <i class="fa fa-desktop"></i></h2></div>
+			<div class="spacer"></div>
 			<p class="sub-title">Developer at Singing Horse Studios LLP</p>
 			<p class="sub-title">Director & Developer at Brading Software LTD</p>
 		</div>
 		<div class="center-bottom">
-			<h1 id="down-btn" class="huge center animated"><a href="#skills"><i class="fa fa-angle-down"></i></a></h1>
+			<h1 class="huge center animated sub-title" style="opacity:1;"><a href="#skills"><i class="fa fa-angle-down"></i></a></h1>
 		</div>
 	</div>
 </section>
-
-
 
 <section class="window white" id="skills">
-<div class="container">
-	<div class="row" id="skills_window">
-		<div class="spacer large"></div>
-		<div class="col-md-6">
-			<div>
-				<div class="heading">
-					<h1 class="large"><i class="fa fa-pencil"></i> Creativity</h1>
-				</div>
-				
-				<div class="spacer"></div>
-				<div class="skills-body">
-				{% for skill in skills %}
-					{% if skill.option == 'Creativity' %}
-					<div class="skill" data-rating='{{skill.rating}}'>
-						<span>{{skill.name}}</span><span class="pull-right skill-rating"></span>
+	<div class="container">
+		<div class="row" id="skills_window">
+			<div class="spacer large"></div>
+			<div class="col-md-6">
+				<div>
+					<div class="heading">
+						<h1 class="large"><i class="fa fa-magic"></i> Creativity</h1>
 					</div>
-					{% endif%}
-				{% endfor %}
+					
+					<div class="spacer"></div>
+					<div class="skills-body" id="skills-body">
+					{% for skill in skills %}
+						{% if skill.option == 'Creativity' %}
+						<div class="skill" data-rating='{{skill.rating}}'>
+							<span>{{skill.name}}</span><span class="pull-right skill-rating"></span>
+						</div>
+						{% endif%}
+					{% endfor %}
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-md-6">
-			<div>
-				<div class="heading">
-					<h1 class="large"><i class="fa fa-cog"></i> Development</h1>
-				</div>
-				
-				<div class="spacer"></div>
-				<div class="skills-body">					
-				{% for skill in skills %}
-					{% if skill.option == 'Development' %}
-					<div class="skill" data-rating='{{skill.rating}}'>
-						<span>{{skill.name}}</span><span class="pull-right skill-rating"></span>
+			<div class="col-md-6">
+				<div>
+					<div class="heading">
+						<h1 class="large"><i class="fa fa-desktop"></i> Development</h1>
 					</div>
-					{% endif%}
-				{% endfor %}					
+					
+					<div class="spacer"></div>
+					<div class="skills-body">					
+					{% for skill in skills %}
+						{% if skill.option == 'Development' %}
+						<div class="skill" data-rating='{{skill.rating}}'>
+							<span>{{skill.name}}</span><span class="pull-right skill-rating"></span>
+						</div>
+						{% endif%}
+					{% endfor %}					
+					</div>
 				</div>
 			</div>
+			
 		</div>
-		
 	</div>
-</div>
-
-
 </section>
+
+<section class="window half grey">
+	<div class="row" id="projects">
+		<div class="center">
+			<h1 class="large">Projects</h1>
+		</div>
+		<div class="spacer large"></div>
+		<div class="col-md-12">
+			<div class="row center">
+				<div class="col-md-4 col-sm-6">
+					<a href="#">
+						<div class="project">
+							<div class="project-img">
+								<img src="{{STATIC_URL}}simon/img/distance_learning.jpg" width="100%">
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<a href="#">
+						<div class="project">
+							<div class="project-img">
+								<img src="{{STATIC_URL}}simon/img/maven_rocket.png" width="100%">
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6">
+						<a href="#">
+						<div class="project">
+							<div class="project-img">
+								<img src="{{STATIC_URL}}simon/img/maven_tool.png" width="100%">	
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="spacer"></div>
+	</div>
+</section>
+
+<section class="window blur_2">
+	<div class="row" id="contact">
+		<h1 class="large">Contact Me</h1>
+		
+  <div class="col-md-12">
+	  <form role="form" action="" id="contact_form" method="post" >
+	  {% csrf_token %}
+	    <div class="col-lg-6">
+	      <div class="form-group">
+	        <label for="InputName">Your Name</label>
+	        <div class="input-group">
+	          <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+	          <span class="input-group-addon"></span></div>
+	      </div>
+	      <div class="form-group">
+	        <label for="InputEmail">Your Email</label>
+	        <div class="input-group">
+	          <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required  >
+	          <span class="input-group-addon"></span></div>
+	      </div>
+	      <div class="form-group">
+	        <label for="InputMessage">Message</label>
+	        <div class="input-group">
+	          <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+	          <span class="input-group-addon"></span></div>
+	      </div>
+	      <div class="form-group">
+	        <label for="InputReal">What is 4+3?</label>
+	        <div class="input-group">
+	          <input type="text" class="form-control" name="InputReal" id="InputReal" required>
+	          <span class="input-group-addon"></span></div>
+	      </div>
+	      <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+	    </div>
+	  </form>
+	  <hr class="featurette-divider hidden-lg">
+	  <div class="col-lg-5 col-md-push-1">
+	    <address>
+	    <h3>Contact Details</h3>
+	    <p class="lead"> 
+	      Location: Brighton<br>
+	      Phone: XXX-XXX-XXXX<br>
+	    </p>
+	    </address>
+	  </div>
+	</div>
+	</div>
+</section>
+
+<footer class="center">
+	<div class="spacer"></div>
+	<div class="row">
+		<div class="col-md-4 left">
+			<p class="lead"><a href="#Projects" class="white">Projects</a><br>
+			<a href="#Projects" class="white">Details</a></p>
+		</div>
+		<div class="col-md-8 right">
+			<p class="lead">
+				Simon Hunt<br>
+				Front-end Contractor<br>
+			</p>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+
 {% endblock %}
 
