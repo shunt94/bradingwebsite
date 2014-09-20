@@ -50,7 +50,6 @@
 	
 
 	function fadeInSkills() {
-		console.log("asd");
 		var i = 1;
 		circleFill();
 		function circleFill() {
@@ -127,7 +126,7 @@
 				<div class="skills-body">
 				{% for skill in skills %}
 					{% if skill.option == 'Creativity' %}
-					<div class="skill" data-counter="0" data-rating='{{skill.rating}}'>
+					<div class="skill" data-rating='{{skill.rating}}'>
 						<span>{{skill.name}}</span><span class="pull-right skill-rating"></span>
 					</div>
 					{% endif%}
