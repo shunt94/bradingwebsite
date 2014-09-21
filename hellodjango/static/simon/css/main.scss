@@ -1,5 +1,6 @@
-body {
+body, html {
 	font-family: 'Lato', sans-serif;
+	height: 100%;
 }
 
 p {
@@ -11,7 +12,11 @@ p {
 	}
 }
 .window {
-	height: 100%;
+	min-height: 100%;
+	position: relative;
+	&.half {
+		min-height: 70%;
+	}
 	&.blue {
 		background-color: #0784f2;
 		color: #fff;
@@ -24,8 +29,16 @@ p {
 		background: url("/static/simon/img/blur_1.jpg");
 		color: #fff;
 	}
+	&.blur_2 {
+		background: url("/static/simon/img/blur_2.jpg");
+		color: #fff;
+	}
 	&.purple {
 		background-color: #a55afa;
+	}
+	&.grey {
+		background-color: #8c8c8c;
+		color: #fff;
 	}
 }
 
@@ -52,6 +65,8 @@ h1 {
 
 
 .center { text-align: center; }
+.left { text-align: left; }
+.right {text-align: right;}
 .centered { margin: 0 auto; }
 
 .spacer {
@@ -120,6 +135,9 @@ h1 {
 .black {
 	color: #333;
 }
+.white {
+	color:#fff;
+}
 .red {
 	color: #f82525;
 }
@@ -132,4 +150,35 @@ h1 {
 	padding-bottom: 8px;
 	padding-right: 30px;
 	padding-left: 5px;
+}
+
+.project-title {
+	position: absolute;
+	margin-top: 15%;
+	background-color: #333;
+}
+
+.project { 
+	box-shadow: 2px 3px 5px #575757;
+	-webkit-transition: all .2s ease-in-out; 
+	&:hover{
+		-webkit-transform: scale(1.1);
+		box-shadow: 10px 10px 10px #575757;
+	}	
+}
+
+footer {
+	background-color: #8c8c8c;	
+	color: #fff;
+	height: 15%;
+	overflow: hidden;
+	
+	.lead {
+		font-size: 22px;
+	}
+	
+}
+
+a:hover {
+	text-decoration: none;
 }
