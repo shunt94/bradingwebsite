@@ -1,4 +1,5 @@
-{% extends 'connor/one_page_base.html' %}
+{% extends 'connor/base.html' %}
+{% block content %}
 {% block first_section %}
 <div class="row">
      <div class="col-md-6 hidden-md hidden-lg" style="margin-top: 50px;">
@@ -107,6 +108,7 @@
     </div><!-- /.carousel -->
     </div>
 </div>
+{% endblock %}
 {% endblock %}
 {% block js %}
 {{ block.super }}

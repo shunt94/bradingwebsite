@@ -35,7 +35,7 @@
         <div class="col-md-7">
             <h2>What's next for Brading Software?</h2>
             <p class="lead">We are currently taking on clients for app and web development, see our 
-            	<a href="about.html">About Us and Contact Us</a> page for more information.
+            	<a href="{% url 'about' %}">About Us and Contact Us</a> page for more information.
             </p>
         </div>
         <div class="col-md-5">
@@ -44,11 +44,19 @@
     </div>
     <hr class="featurette-divider">
 </div>
+ <footer>
+    <div class="container-fluid">
 
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Company number 09123565&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info@bradingsoftware.co.uk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2014 Brading Software Inc.</p>
+
+    </div>
+ </footer>
 
 {% endblock %} 
 
 {% block footer %}
+{#    {{ block.super }}#}
 <p class="cc">
     <a href="http://www.flickr.com/photos/jp_london/1012935875">"Sunset in Brighton"</a>is copyright (c) 2007 //joao paulo and made available under
     <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons license.</a>
