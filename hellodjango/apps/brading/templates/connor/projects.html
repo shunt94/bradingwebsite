@@ -11,7 +11,7 @@
         {% else %}
         <li class="timeline-inverted">
         {% endif %}
-          <div class="timeline-badge {% if project.completed %}success{% else %}warning{% endif %}"><i class="glyphicon {{ project.icon }}"></i></div>
+          <div onmouseover="nhpup.popup('{% if project.completed %}Completed {% else %}In progress {% endif %}{% ifequal project.icon "glyphicon-briefcase" %}work project{% else %}{% ifequal project.icon "glyphicon-book" %}university project{% else %}Brading Software project{% endifequal %}{% endifequal %}');" class="timeline-badge {% if project.completed %}success{% else %}warning{% endif %}"><i class="glyphicon {{ project.icon }}"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title">{{ project.title }}</h4>
