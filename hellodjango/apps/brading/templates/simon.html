@@ -4,6 +4,7 @@
 {% block scripts %}
 {{block.super}}
 <script src="{{STATIC_URL}}simon/js/jquery.appear.js"></script>
+<script src="js/lightbox.min.js"></script>
 <script>
 
 	// Faded Intro Scenes
@@ -162,7 +163,8 @@
 					<a href="#">
 						<div class="project">
 							<div class="project-img">
-								<img src="{{STATIC_URL}}simon/img/distance_learning.jpg" width="100%">
+<!--								<img src="{{STATIC_URL}}simon/img/distance_learning.jpg" width="100%">-->
+								<a href="{{STATIC_URL}}simon/img/distance_learning.jpg" data-lightbox="projects"></a>
 							</div>
 						</div>
 					</a>
@@ -172,6 +174,7 @@
 						<div class="project">
 							<div class="project-img">
 								<img src="{{STATIC_URL}}simon/img/maven_rocket.png" width="100%">
+								
 							</div>
 						</div>
 					</a>
