@@ -83,7 +83,7 @@ h1 {
   bottom: 0;
   right: 0; }
 
-.center-verticle {
+.center-vertical {
   margin: auto;
   position: absolute;
   top: 20%;
@@ -109,17 +109,8 @@ h1 {
 .heading h1 {
   font-weight: 300; }
 
-.black {
-  color: #333; }
-
 .white {
   color: #fff; }
-
-.red {
-  color: #f82525; }
-
-.transparent {
-  opacity: 0.4; }
 
 .skill {
   padding-bottom: 8px;
@@ -140,14 +131,6 @@ h1 {
   .project:hover {
     -webkit-transform: scale(1.1);
     box-shadow: 10px 10px 10px #575757; }
-
-footer {
-  background-color: #8c8c8c;
-  color: #fff;
-  height: 15%;
-  overflow: hidden; }
-  footer .lead {
-    font-size: 22px; }
 
 a:hover {
   text-decoration: none; }
