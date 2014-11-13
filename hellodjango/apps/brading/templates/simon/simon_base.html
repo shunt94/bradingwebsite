@@ -1,22 +1,15 @@
 <html>
 <head>
+<title>Simon Hunt - Front end website development contractor</title>
 {% block css %}
-<!-- SCSS - CSS -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{STATIC_URL}}simon/css/animate.css">
 <link rel="stylesheet" href="{{STATIC_URL}}simon/css/main.css">
-
-<!-- Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-<!-- Optional theme -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="{{STATIC_URL}}simon/css/lightbox.css" rel="stylesheet" />
 {% endblock %}
-
-
-
-
 </head>
 <body>
 {% block content %}
@@ -24,7 +17,9 @@
 
 {% block scripts %}
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="{{STATIC_URL}}simon/js/jquery.windows.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="{{STATIC_URL}}simon/js/lightbox.min.js"></script>
 <script>
 
 // Smooth Scrolling 
@@ -44,10 +39,6 @@ $(function() {
   });
 }); 
 </script>
-
-<script src="{{STATIC_URL}}simon/js/jquery.windows.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
 {% endblock %}
 
 </body>

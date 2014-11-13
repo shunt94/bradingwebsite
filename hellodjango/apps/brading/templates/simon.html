@@ -4,6 +4,7 @@
 {% block scripts %}
 {{block.super}}
 <script src="{{STATIC_URL}}simon/js/jquery.appear.js"></script>
+<script src="js/lightbox.min.js"></script>
 <script>
 
 	// Faded Intro Scenes
@@ -28,7 +29,7 @@
 	
 	
 	$('.skill').each( function() {
-		for(i = 0; i < 5; i++) {
+		for(var i = 0; i < 5; i++) {
 			$(this).children( ".skill-rating" ).append("<i class='fa fa-circle-thin'></i>");
 		}	
 	});
@@ -88,15 +89,11 @@
 </div>
 <section class="window blur_1">
 	<div class="row" id="home">
-		<div class="center center-verticle">
+		<div class="center center-vertical">
 			<h1 id="intro_beauty" class="huge animated">Beautiful Design</h1>
 			<h1 id="intro_prec" class="large animated">Imagination is the limit</h1>
-			<p id="intro-sub" class="sub-title animated">Front-End Developer - UI Designer - Contractor</p>
-			<div class="spacer"></div>
+			<p id="intro-sub" class="sub-title animated">Front-End Developer - Designer</p>
 			<div class="sub-title" style="opacity: 0.95;"><h2><i class="fa fa-mobile"></i> <i class="fa fa-tablet"></i> <i class="fa fa-laptop"></i> <i class="fa fa-desktop"></i></h2></div>
-			<div class="spacer"></div>
-			<p class="sub-title">Developer at Singing Horse Studios LLP</p>
-			<p class="sub-title">Director & Developer at Brading Software LTD</p>
 		</div>
 		<div class="center-bottom">
 			<h1 class="huge center animated sub-title" style="opacity:1;"><a href="#skills"><i class="fa fa-angle-down"></i></a></h1>
@@ -111,7 +108,7 @@
 			<div class="col-md-6">
 				<div>
 					<div class="heading">
-						<h1 class="large"><i class="fa fa-magic"></i> Creativity</h1>
+						<h1 class="large"><i class="fa fa-pencil"></i> Design</h1>
 					</div>
 					
 					<div class="spacer"></div>
@@ -157,30 +154,46 @@
 		<div class="spacer large"></div>
 		<div class="col-md-12">
 			<div class="row center">
-				<div class="col-md-4 col-sm-6">
+				<div class="col-md-4 col-sm-6 project-image">
 					<a href="#">
 						<div class="project">
 							<div class="project-img">
-								<img src="{{STATIC_URL}}simon/img/distance_learning.jpg" width="100%">
+<!--								<img src="{{STATIC_URL}}simon/img/distance_learning.jpg" width="100%">-->
+								<a href="{{STATIC_URL}}simon/img/distance_learning.jpg" data-lightbox="projects">
+									<img src="{{STATIC_URL}}simon/img/distance_learning.jpg" alt="Sussex University Distance Learning" width="100%">
+								</a>
 							</div>
+						</div>
+						<div class="project-title">
+							Sussex University - Distance Learning
 						</div>
 					</a>
 				</div>
-				<div class="col-md-4 col-sm-6">
+				<div class="col-md-4 col-sm-6 project-image">
 					<a href="#">
 						<div class="project">
 							<div class="project-img">
-								<img src="{{STATIC_URL}}simon/img/maven_rocket.png" width="100%">
+								<a href="{{STATIC_URL}}simon/img/maven_rocket.png" data-lightbox="projects">
+									<img src="{{STATIC_URL}}simon/img/maven_rocket.png" alt="Maven Rocket" width="100%">
+								</a>
 							</div>
+						</div>
+						<div class="project-title">
+							MavenRocket Landing Website
 						</div>
 					</a>
 				</div>
-				<div class="col-md-4 col-sm-6">
+				<div class="col-md-4 col-sm-6 project-image">
 						<a href="#">
 						<div class="project">
 							<div class="project-img">
-								<img src="{{STATIC_URL}}simon/img/maven_tool.png" width="100%">	
+								<a href="{{STATIC_URL}}simon/img/maven_tool.png" data-lightbox="projects">
+									<img src="{{STATIC_URL}}simon/img/maven_tool.png" alt="MavenRocket Tool" width="100%">	
+								</a>
 							</div>
+						</div>
+						<div class="project-title">
+							MavenRocket Tool/Dashboard
 						</div>
 					</a>
 				</div>
@@ -231,35 +244,12 @@
 	    <h3>Contact Details</h3>
 	    <p class="lead"> 
 	      Location: Brighton<br>
-	      Phone: XXX-XXX-XXXX<br>
+	      Email: simonhunt94@gmail.com<br>
+	      <a href="http://uk.linkedin.com/pub/simon-hunt/a1/17/294/" target="_blank">Linked In Page</a>
 	    </p>
 	    </address>
 	  </div>
 	</div>
 	</div>
 </section>
-
-<footer class="center">
-	<div class="spacer"></div>
-	<div class="row">
-		<div class="col-md-4 left">
-			<p class="lead"><a href="#Projects" class="white">Projects</a><br>
-			<a href="#Projects" class="white">Details</a></p>
-		</div>
-		<div class="col-md-8 right">
-			<p class="lead">
-				Simon Hunt<br>
-				Front-end Contractor<br>
-			</p>
-		</div>
-	</div>
-</footer>
-
-
-
-
-
-
-
 {% endblock %}
-
