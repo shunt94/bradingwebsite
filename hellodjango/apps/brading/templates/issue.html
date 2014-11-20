@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel='stylesheet' type="text/css" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+    <title>Issue tracking</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">{{ issue.title }}</h1>
+            <a href="{% url 'issue_tracker' %}" class="btn btn-info btn-large">Issue dashboard</a>
+           <a href="http://www.bradingsoftware.co.uk/admin/brading/task/{{ issue.pk }}/" class="btn btn-info btn-large">Edit issue</a>
+            <div class="row">
+                <div class="col-md-6">
+                {% if issue.parent %}
+                    <a href="{% url 'issue' issue.parent.pk %}" class="btn btn-primary btn-large">Parent ({{issue.parent}})</a>
+                {% endif %}
+                <h3>Time spent: {{ issue.time_spent }}</h3>
+                <h3>Assigned to: {{ issue.assignee }}, {{ issue.assignee2 }}, {{ issue.assignee3 }}</h3>
+                <h3>Done? {{ issue.done }}</h3>
+                <h3>Description</h3>
+                <p>{{ issue.description }}</p>
+                </div>
+                <div class="col-md-6">
+                <h2>Children</h2>
+                    {% for child in children %}
+                        <a href="{% url 'issue' issue.pk %}" class="btn btn-primary btn-large">{{child}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</body>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</html>

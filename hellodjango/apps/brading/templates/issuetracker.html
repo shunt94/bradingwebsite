@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel='stylesheet' type="text/css" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+    <title>Issue tracking</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Brading Software issue tracking</h1>
+         <a href="http://www.bradingsoftware.co.uk/admin/brading/task/add/" class="text-center btn btn-primary btn-large">Add issue</a>
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>Jordans</h2>
+                    <p>Total time = {{ jordan_time }}</p>
+                    {% for issue in jordans_issues %}
+                    <a href="{% url 'issue' issue_id=issue.pk %}" class="btn btn-primary btn-large">{{issue}}</a>
+                        <br>
+                        <br>
+                    {% endfor %}
+                </div>
+                <div class="col-md-3">
+                    <h2>Simons</h2>
+                  <p>Total time = {{ simon_time }}</p>
+                    {% for issue in simons_issues %}
+                    <a href="{% url 'issue' issue.pk %}" class="btn btn-primary btn-large">{{issue}}</a>
+                        <br>
+                        <br>
+                    {% endfor %}
+                </div>
+                <div class="col-md-3">
+                    <h2>Connors</h2>
+                     <p>Total time = {{ connor_time }}</p>
+                    {% for issue in connors_issues %}
+                    <a href="{% url 'issue' issue.pk %}" class="btn btn-primary btn-large">{{issue}}</a>
+                        <br>
+                        <br>
+                    {% endfor %}
+                </div>
+                <div class="col-md-3">
+                    <h2>Unassigned</h2>
+                    {% for issue in other %}
+                    <a href="{% url 'issue' issue.pk %}" class="btn btn-primary btn-large">{{issue}}</a>
+                        <br>
+                        <br>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</html>

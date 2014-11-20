@@ -40,19 +40,50 @@ class Project(models.Model):
 
     def __unicode__(self):
         return self.title
-        
+
 
 class Skill(models.Model):
-	CREATIVITY='Creativity'
-	DEVELOPMENT='Development'
-	choices = (
-		(CREATIVITY, CREATIVITY),
-		(DEVELOPMENT, DEVELOPMENT)
-	)
-	name = models.CharField(max_length=255)
-	rating = models.IntegerField()
-	option = models.CharField(max_length=20, choices=choices)
-	
-	def __unicode__(self):
-		return self.name
-	
+    CREATIVITY = 'Creativity'
+    DEVELOPMENT = 'Development'
+    choices = (
+        (CREATIVITY, CREATIVITY),
+        (DEVELOPMENT, DEVELOPMENT)
+    )
+    name = models.CharField(max_length=255)
+    rating = models.IntegerField()
+    option = models.CharField(max_length=20, choices=choices)
+
+    def __unicode__(self):
+        return self.name
+
+
+class Task(models.Model):
+    SIMON = 'Simon'
+    CONNOR = 'Connor'
+    JORDAN = 'Jordan'
+    UNASSIGNED = 'Unassigned'
+    choices = (
+        (SIMON, SIMON),
+        (CONNOR, CONNOR),
+        (JORDAN, JORDAN),
+        (UNASSIGNED, UNASSIGNED),
+    )
+    title = models.CharField(max_length=255)
+    parent = models.ForeignKey('self', blank=True, null=True)
+    assignee = models.CharField(choices=choices,
+                                default=UNASSIGNED,
+                                max_length=20)
+    assignee2 = models.CharField(choices=choices,
+                                 default=UNASSIGNED,
+                                 max_length=20)
+    assignee3 = models.CharField(choices=choices,
+                                 default=UNASSIGNED,
+                                 max_length=20)
+    done = models.BooleanField(default=False)
+    time_spent = models.DecimalField(blank=True, default=0.0,
+                                     max_digits=20, decimal_places=2)
+
+    description = models.TextField()
+
+    def __unicode__(self):
+        return self.title
