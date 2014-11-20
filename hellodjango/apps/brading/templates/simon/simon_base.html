@@ -1,29 +1,27 @@
 <html>
 <head>
-<title>Simon Hunt - Front end website development contractor</title>
+<title>Simon Hunt - Front End Website Developer</title>
 {% block css %}
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="{{STATIC_URL}}simon/css/animate.css">
-<link rel="stylesheet" href="{{STATIC_URL}}simon/css/main.css">
-<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<link href="{{STATIC_URL}}simon/css/lightbox.css" rel="stylesheet" />
+<link rel="stylesheet" type='text/css' href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" type='text/css' href="{{STATIC_URL}}simon/css/animate.css">
+<link rel="stylesheet" type='text/css' href="{{STATIC_URL}}simon/css/main.css">
+<link rel="stylesheet" type='text/css' href="http://fonts.googleapis.com/css?family=Lato:100,400">
+<link rel="stylesheet" type='text/css' href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" >
+<link rel="stylesheet" type='text/css' href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type='text/css' href="{{STATIC_URL}}simon/css/lightbox.css">
 {% endblock %}
 </head>
+
 <body>
 {% block content %}
 {% endblock %}
-
 {% block scripts %}
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="{{STATIC_URL}}simon/js/jquery.windows.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="{{STATIC_URL}}simon/js/lightbox.min.js"></script>
-<script>
-
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}simon/js/jquery.windows.js"></script>
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}simon/js/lightbox.min.js"></script>
+<script type="text/javascript">
 // Smooth Scrolling 
-
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -40,6 +38,5 @@ $(function() {
 }); 
 </script>
 {% endblock %}
-
 </body>
 </html>
