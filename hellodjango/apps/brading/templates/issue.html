@@ -28,7 +28,7 @@
                 <div class="col-md-6">
                 <h2>Children</h2>
                     {% for child in children %}
-                        <a href="{% url 'issue' issue.pk %}" class="btn btn-primary btn-large">{{child}}</a>
+                        <a href="{% url 'issue' child.pk %}" class="btn btn-primary btn-large">{{child}}</a>
                     {% endfor %}
                 </div>
             </div>

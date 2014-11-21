@@ -37,6 +37,7 @@
                      <p>Total time = {{ connor_time }}</p>
                     {% for issue in connors_issues %}
                     <a href="{% url 'issue' issue.pk %}" class="btn btn-primary btn-large">{{issue}}</a>
+                        {{ issue.parent }}
                         <br>
                         <br>
                     {% endfor %}
