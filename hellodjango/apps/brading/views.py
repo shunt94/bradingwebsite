@@ -92,19 +92,20 @@ def issue_tracker(request):
     connor_time = 0
     simon_time = 0
     for i in issues:
-        if (i.assignee == Task.JORDAN or i.assignee2 == Task.JORDAN or i.assignee3 == Task.JORDAN) and i.parent is None:
-            jordans.append(i)
+        if i.assignee == Task.JORDAN or i.assignee2 == Task.JORDAN or i.assignee3 == Task.JORDAN:
+            if i.parent is None:
+                jordans.append(i)
             jordan_time += i.time_spent
-        if (i.assignee == 'Simon' or i.assignee2 == 'Simon' or i.assignee3 == 'Simon') and i.parent is None:
-            simons.append(i)
+        if i.assignee == 'Simon' or i.assignee2 == 'Simon' or i.assignee3 == 'Simon':
+            if i.parent is None:
+                simons.append(i)
             simon_time += i.time_spent
-        if (i.assignee == 'Connor' or i.assignee2 == 'Connor' or i.assignee3 == 'Connor') and i.parent is None:
-            connors.append(i)
+        if i.assignee == 'Connor' or i.assignee2 == 'Connor' or i.assignee3 == 'Connor':
+            if i.parent is None:
+                connors.append(i)
             connor_time += i.time_spent
         if i.assignee == 'Unassigned' and i.assignee2 == 'Unassigned' and i.assignee3 == 'Unassigned':
             other.append(i)
-
-
 
     content = {
         'jordans_issues': jordans,
